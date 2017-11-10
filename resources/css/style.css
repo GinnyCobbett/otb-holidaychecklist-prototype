@@ -1,6 +1,13 @@
 html {
-  font-size: 14px;
-  font-family: Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font: 1.4em/1.5em BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: linear-gradient(to bottom, #02abe4 0%, #fff 25em, #fff 100%);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  color: #313137;
 }
 
 a {
