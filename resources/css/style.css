@@ -14,18 +14,69 @@ a {
   text-decoration: none;
 }
 
+.header {
+  padding-top: 1em;
+}
+
+.header__logo {
+  background-image: url('https://static.onthebeach.co.uk/packaged-assets/application/logos/onthebeach/otb-logo-uk-blue-a091160f1e9e75766f2231aaebd73a3417befcd501b1d8dab509c1fe487d00f3.svg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: transparent!important;
+  display: block;
+  height: 4.8em;
+  width: 9em;
+}
+
 .container {
+  color: #17317f;
   max-width: 400px;
+  padding: 0;
+}
+
+.container--white-background {
+  background-color: white;
 }
 
 .btn {
   margin: .25rem 0 1rem 0;
 }
 
-.panel-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.panel-group {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.panel-heading--chunky {
+  border-bottom: 3px solid #DDDDDD!important;
+  text-align: center;
+  padding: 3em;
+}
+
+.panel-default {
+  border: 0
+}
+
+.panel-default > .panel-heading {
+  color: #17317f;
+}
+
+.holiday-checklist {
+  border-bottom: 4px solid #fedc07;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.holiday-checklist__heading {
+  font-weight: bold;
+  padding: 1em;
+  text-align: center;
+}
+
+.holiday-checklist__title {
+  font-size: 1.75em;
+  margin: 0 0 0.5em 0;
 }
 
 .alert {
