@@ -35,6 +35,12 @@ a {
   padding: 0;
 }
 
+.basket {
+  background-color: #FEF6C3;
+  padding: .5em;
+  display: block;
+}
+
 .container--white-background {
   background-color: white;
 }
@@ -51,7 +57,17 @@ a {
 .panel-heading--chunky {
   border-bottom: 3px solid #DDDDDD!important;
   text-align: center;
-  padding: 3em;
+  padding: 2em;
+}
+
+.panel-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-body {
+  font-size: .9em;
 }
 
 .panel-default {
@@ -83,4 +99,23 @@ a {
   width: 30%;
   margin-bottom: 0;
   padding: .5rem;
+}
+
+.flight-details-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.flight-no{
+  padding-right: .5em;
+}
+
+.flight-stats {
+  text-align: right;
+  padding-left: .5em;
+}
+
+.panel-body h5 {
+  border-bottom: 1px solid darkblue;
 }

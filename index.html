@@ -10,11 +10,6 @@
   <script src="resources/js/scripts.js"></script>
   <title>Holiday Checklist Prototype</title>
 
-<!--  <script>
-  $(document).ready(function(){
-      $('[data-toggle="popover"]').popover();
-  });
-</script> -->
 
 </head>
 <body>
@@ -33,14 +28,7 @@
         <p>Complete your checklist before you go and be super prepared to have a fantastic holiday!</p>
       </div>
     </div>
-<!--
-    <div class="progress">
-      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
-  aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
-    10% Complete
-      </div>
-    </div>
--->
+
 <!--Checklist accordion-->
 
     <div class="panel-group" id="accordion">
@@ -49,11 +37,13 @@
       <div class="panel panel-default">
 
         <div class="panel-heading panel-heading--chunky">
-          <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">1 of 6 - Your details</a>
-          </h4>
-          <div id="customer-details-true" class="alert alert-success collapse">
-            <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+          <div class="panel-status">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Check your details</a>
+            </h4>
+            <div id="customer-details-true" class="alert alert-success collapse">
+              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+            </div>
           </div>
         </div>
 
@@ -67,10 +57,36 @@
               <li>Mr Jimmy Doe</li>
             </ul>
             <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-details-true">Yes</button>
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-details-false">No</button>
+            <!--<button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-details-false">No</button>
             <div id="customer-details-false" class="collapse">
               <p>If your details are not correct, please contact our customer centre on 0161 900 0000. Please note that you may be charged an administrative fee for changing these details.</p>
+            </div>-->
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-details-false">No</button>
+
+            <!-- Modal -->
+            <div id="customer-details-false" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Oops!</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>If your details are not correct, please contact our customer centre on 0161 900 0000. Please note that you may be charged an administrative fee for changing these details.</p>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                  </div>
+                </div>
+
+              </div>
             </div>
+            <!--End of modal-->
+
           </div>
         </div>
       </div>
@@ -78,36 +94,42 @@
 
 <!--2nd accordion-->
       <div class="panel panel-default">
-
-        <div class="panel-heading panel-heading--chunky">
-          <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2 of 6 - Travel insurance</a>
-          </h4>
-          <div id="insurance-details-true" class="alert alert-success collapse">
-            <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+          <div class="panel-heading panel-heading--chunky">
+            <div class="panel-status">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Are you insured?</a>
+              </h4>
+              <div id="insurance-details-true" class="alert alert-success collapse">
+                <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+              </div>
+              <div id="insurance-details-added" class="alert alert-success collapse">
+                <i class="fa fa-check" aria-hidden="true"></i>  <strong>Added</strong>
+              </div>
+            </div>
           </div>
-        </div>
 
         <div id="collapse2" class="panel-collapse collapse">
 
           <div class="panel-body">
-
-            <p><strong>Do you have travel insurance?</strong>  <a class="pop-text" href="#" data-toggle="popover" data-trigger="focus" data-content="We strongly recommend passengers take out travel insurance before departure in order to adequately cover you and your party. Some airlines or Travel Supplier may prevent you from travelling if proof of insurance cannot be provided."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Do you have travel insurance?</strong>  <a class="pop-text" href="#" data-toggle="popover" data-trigger="focus" data-content="We strongly recommend you take out travel insurance before departure in order to adequately cover you and your party. Some airlines may prevent you from travelling if proof of insurance cannot be provided."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
             <div class="radio">
 
-              <label class="radio-option"><input type="radio" name="optradio" data-target="#selected">Europe Single Trip - <strong>£11.73pp</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.<br>
+              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#insurance-details-added">Europe Single Trip - <strong>£11.73pp</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.<br>
               Cover included (per person):
                 <ul>
                 <li>Up to £10m Emergency Medical Cover</li>
                 <li>Up to £1,500 Personal Possessions Cover</li>
                 <li>Up to £1,250 Cancellation Cover</li>
-                </ul></label>
+                </ul>
+              </label>
 
             </div>
 
+
+
             <div class="radio">
-              <label><input type="radio" name="optradio">I have my own insurance, thanks</label>
+              <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#insurance-details-true">I have my own insurance, thanks</label>
             </div>
 
           </div>
@@ -119,11 +141,16 @@
       <div class="panel panel-default">
 
         <div class="panel-heading panel-heading--chunky">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">3 of 6 - Airport Parking</a>
-          </h4>
-          <div id="parking-details-true" class="alert alert-success collapse">
-            <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+          <div class="panel-status">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Do you need parking?</a>
+            </h4>
+            <div id="parking-details-true" class="alert alert-success collapse">
+              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+            </div>
+            <div id="parking-details-added" class="alert alert-success collapse">
+              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Added</strong>
+            </div>
           </div>
         </div>
 
@@ -132,14 +159,23 @@
             <p><strong>Do you need airport parking?</strong>  <a href="#" data-toggle="popover" data-trigger="focus" data-content="We search hundreds of airport car parks to find the best prices for you. Choose from on and off site parking, or meet & greet services."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
             <div class="radio">
-              <label><a href="#" title="On-Site Parking" data-toggle="popover" data-trigger="focus" data-content="Product information"><input type="radio" name="optradio">On-Site Parking, JetParks - <strong>£41.99</strong></a></label>
+
+              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-added">Meet & Greet - <strong>£86.10</strong></label>
+
             </div>
+
             <div class="radio">
-              <label><a href="#" title="Meet & Greet" data-toggle="popover" data-trigger="focus" data-content="Product information"><input type="radio" name="optradio">Meet & Greet - <strong>£86.10</strong></a></label>
+
+              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-added">On-Site Parking, JetParks - <strong>£41.99</strong></label>
+
             </div>
+
+
+
             <div class="radio">
-              <label><input type="radio" name="optradio">I don't need parking, thanks</label>
+              <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-true">I don't need parking, thanks</label>
             </div>
+
           </div>
         </div>
 
@@ -149,26 +185,67 @@
       <div class="panel panel-default">
 
         <div class="panel-heading panel-heading--chunky">
-          <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">4 of 6 - Your Flights</a>
-          </h4>
-          <div id="customer-flights-true" class="alert alert-success collapse">
-            <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+          <div class="panel-status">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Check your flights</a>
+            </h4>
+            <div id="customer-flights-true" class="alert alert-success collapse">
+              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+            </div>
           </div>
         </div>
 
         <div id="collapse4" class="panel-collapse collapse">
           <div class="panel-body">
-            <p><strong>Are your flight details correct?</strong>  <a href="#" data-toggle="popover" data-trigger="focus" data-content="Airlines occasionally make adjustments to flights over time, so it's a good idea to reconfirm that the flight times are right."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
-            <ul class="details">
-              <li>Outbound</li>
-              <li>Inbound</li>
-            </ul>
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-flights-true">Yes</button>
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-flights-false">No</button>
-            <div id="customer-flights-false" class="collapse">
-              <p>If your details are not correct, please contact our customer centre on 0161 900 0000. Please note that you may be charged an administrative fee for changing these details.</p>
+            <p><strong>Are your flight details correct?</strong>  <a href="#" data-toggle="popover" data-trigger="focus" data-content="Airlines occasionally make adjustments to flights over time, so it's important to reconfirm that the flight times are right."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+
+            <h5>Outbound</h5>
+            <div class="flight-details-container">
+              <div class="flight-no">
+                <p>Ryanair FR3445<br>Manchester (MAN) to Palma (PMI)</p>
+              </div>
+              <div class="flight-stats">
+                <p>17:10 - 4 July 2018<br><em>arriving 20:50 local time</em><br>flight duration 2h40m</p>
+              </div>
             </div>
+
+            <h5>Inbound</h5>
+            <div class="flight-details-container">
+              <div class="flight-no">
+                <p>Ryanair FR3446<br>Palma (PMI) to Manchester (MAN)</p>
+              </div>
+              <div class="flight-stats">
+                <p>23:30 - 11 July 2018<br><em>arriving 23:20 local time</em><br>flight duration 2h50m</p>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-flights-true">Yes</button>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-flights-false">No</button>
+
+            <!-- Modal -->
+            <div id="customer-flights-false" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Oops!</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>If your details are not correct, please contact our customer centre on 0161 900 0000. Please note that you may be charged an administrative fee for changing these details.</p>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!--End of modal-->
+
 
             </div>
         </div>
@@ -177,16 +254,37 @@
   <!--5th accordion-->
       <div class="panel panel-default">
         <div class="panel-heading panel-heading--chunky">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">5 of 6 - Transfers</a>
-          </h4>
-          <div id="customer-transfers-true" class="alert alert-success collapse">
-            <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+          <div class="panel-status">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Do you need a transfer?</a>
+            </h4>
+            <div id="customer-transfers-true" class="alert alert-success collapse">
+              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+            </div>
+            <div id="customer-transfers-added" class="alert alert-success collapse">
+              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Added</strong>
+            </div>
           </div>
         </div>
         <div id="collapse5" class="panel-collapse collapse">
           <div class="panel-body">
-              <p><strong>Do you need a transfer from the airport to your hotel?</strong></p>
+            <p><strong>Add transfer</strong>  <a href="#" data-toggle="popover" data-trigger="focus" data-content="Shared shuttle services operate between the airport and main hotel complexes. Alternatively, you can select a private taxi to take you directly to your accommodation."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+
+            <div class="radio">
+
+              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-added">Shuttle Service (return) - <strong>£14.12pp</strong><br>From Majorca airport<br>Estimated journey time: 1h 15m<br>2 passengers</label>
+
+            </div>
+
+            <div class="radio">
+
+              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-added">Speedy Shuttle (return) Max 4 Stops - <strong>£25.22pp</strong><br>From Majorca airport<br>Estimated journey time: 0h 50m<br>2 passengers</label>
+
+            </div>
+
+            <div class="radio">
+              <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-true">I don't need transfers, thanks</label>
+            </div>
 
           </div>
         </div>
@@ -195,22 +293,87 @@
 <!--6th accordion-->
       <div class="panel panel-default">
         <div class="panel-heading panel-heading--chunky">
-          <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">6 of 6 - Your Hotel</a>
-          </h4>
-          <div id="customer-hotel-true" class="alert alert-success collapse">
-            <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+          <div class="panel-status">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Check your hotel details</a>
+            </h4>
+            <div id="customer-hotel-true" class="alert alert-success collapse">
+              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+            </div>
           </div>
         </div>
 
         <div id="collapse6" class="panel-collapse collapse">
           <div class="panel-body">
             <p><strong>Are your hotel details correct?</strong></p>
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-hotel-true">Yes</button>
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-hotel-false">No</button>
 
-            <div id="customer-hotel-false" class="collapse">
-              <p>If your details are not correct, please contact our customer centre on 0161 900 0000. Changing these details may incur an administrative charge.</p>
+            <h5>Holiday Center, Santa Ponsa, Majorca, Balearics</h5>
+            <p>Board basis: Self Catering<br>
+            Room details: One Bedroom Apartment (1 Room)<br>
+            From: 04 July 2018 to 11 July 2018<br>
+            Duration: 7 Nights
+            Guests: 2 Adults</p>
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-hotel-info">Tourism tax applies to this hotel</button>
+
+            <!-- Modal -->
+            <div id="customer-hotel-info" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Details of in-resort taxes</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>From 1st of July 2016, the Balearic Govt. are charging a sustainable tourism tax on all overnight stays which will be payable on arrival in the hotel:
+                      <ul>
+                        <li>5-star & 4-star superior hotels: €2 per night</li>
+                        <li>4-star & 3-star superior hotel: €1.5 per night</li>
+                        <li>1-star, 2-star & 3-star hotels: €1 per night</li>
+                        <li>4-key & 4-key superior tourist apartments: €2 per night</li></ul>
+
+        Exclusions: Children under the age of 16 are exempt from the tax, 50% discount during the off-peak season (Nov 1st - Apr 30th) & 50% discount from the tenth night of any stay onwards</p>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!--End of modal-->
+            <br>
+
+            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-hotel-true">Yes</button>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-hotel-false">No</button>
+
+            <!-- Modal -->
+            <div id="customer-hotel-false" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Oops!</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>If your details are not correct, please contact our customer centre on 0161 900 0000. Please note that you may be charged an administrative fee for changing these details.</p>
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!--End of modal-->
             </div>
           </div>
         </div>
@@ -222,8 +385,47 @@
 
   <div class="container">
     <h3>Basket</h3>
-    <p>Stuff you have put in your basket</p>
-    <button type="button" class="btn btn-primary">Buy now</button>
+
+    <div class="basket">
+      <ul>
+        <li>Europe Single Trip - <strong>£11.73pp</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.</li>
+        <li>Meet & Greet - <strong>£86.10</strong></li>
+        <li>Shuttle Service (return) - <strong>£14.12pp</strong></li>
+      </ul>
+
+
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal">Checkout</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Europe Single Trip</h4>
+          </div>
+          <div class="modal-body">
+            <p>By selecting insurance cover you are confirming that those requiring travel insurance are residents of the UK or Channel Islands and are 70 years of age or under. This policy does not provide cover for any of the travelling party or for non-travelling close relatives who may have any pre-existing medical condition(s).<p>
+              <p>If you have a close relative not travelling with you, whose health is a cause for concern and might lead you to cancel or cut short your trip due to their pre-existing medical condition, then please note that this policy does not provide cover for this circumstance.</p>
+
+              <p>Please read your policy carefully as it contains terms, conditions and exclusions.</p>
+              <ul>
+                <li><a href="#">View the Policy Wording</a></li>
+                <li><a href="#">View the Status Disclosure Document</a></li>
+              </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Accept and confirm</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--End of modal-->
+  </div>
   </div>
 
 </div>
@@ -264,6 +466,7 @@
 </div>
 
 -->
+
 
 
 
