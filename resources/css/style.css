@@ -118,7 +118,7 @@ a.collapsed .panel-heading::after {
 }
 
 .panel-body {
-  font-size: .9em;
+  background-color: #f0f9fd;
 }
 
 .panel-default {
