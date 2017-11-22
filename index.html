@@ -22,6 +22,7 @@
   </div>
 
   <div class="container container--white-background">
+
     <div class="holiday-checklist">
       <div class="holiday-checklist__heading">
         <h2 class="holiday-checklist__title">Holiday Checklist</h2>
@@ -30,26 +31,25 @@
     </div>
 
 <!--Checklist accordion-->
-
     <div class="panel-group" id="accordion">
 
 <!--1st accordion-->
       <div class="panel panel-default">
 
-        <div class="panel-heading panel-heading--chunky">
-          <div class="panel-status">
-            <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Check your details</a>
-            </h4>
-            <div id="customer-details-true" class="alert alert-success collapse">
-              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="active">
+          <div class="panel-heading">
+            <div class="panel-heading__message">
+              <i class="fa fa-check" aria-hidden="true"></i>
             </div>
+            <h4 class="panel-title">
+              Are your details correct?
+            </h4>
           </div>
-        </div>
+        </a>
 
         <div id="collapse1" class="panel-collapse collapse in">
           <div class="panel-body">
-            <p><strong>Are the names below exactly as they appear on your passports?</strong>  <a href="#" data-toggle="popover" data-trigger="focus" data-content="You’d be surprised how many customers only realise a spelling mistake when they get to the airport. Even if you haven’t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Are the names below exactly as they appear on your passports?</strong>  <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="You&#8217;d be surprised how many customers only realise a spelling mistake when they get to the airport. Even if you haven&#8217;t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
             <ul class="details">
               <li>Mr John Doe</li>
               <li>Mrs Jane Doe</li>
@@ -67,7 +67,6 @@
             <!-- Modal -->
             <div id="customer-details-false" class="modal fade" role="dialog">
               <div class="modal-dialog">
-
                 <!-- Modal content-->
                 <div class="modal-content">
                   <div class="modal-header">
@@ -76,62 +75,50 @@
                   </div>
                   <div class="modal-body">
                     <p>If your details are not correct, please contact our customer centre on 0161 900 0000. Please note that you may be charged an administrative fee for changing these details.</p>
-
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
                   </div>
                 </div>
-
               </div>
             </div>
             <!--End of modal-->
-
           </div>
         </div>
       </div>
 
-
 <!--2nd accordion-->
       <div class="panel panel-default">
-          <div class="panel-heading panel-heading--chunky">
-            <div class="panel-status">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Are you insured?</a>
-              </h4>
-              <div id="insurance-details-true" class="alert alert-success collapse">
-                <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
-              </div>
-              <div id="insurance-details-added" class="alert alert-success collapse">
-                <i class="fa fa-check" aria-hidden="true"></i>  <strong>Added</strong>
-              </div>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
+          <div class="panel-heading">
+            <div class="panel-heading__message">
+              <i class="fa fa-check" aria-hidden="true"></i>
             </div>
+            <h4 class="panel-title">
+              Are you insured?
+            </h4>
           </div>
+        </a>
 
         <div id="collapse2" class="panel-collapse collapse">
 
           <div class="panel-body">
-            <p><strong>Do you have travel insurance?</strong>  <a class="pop-text" href="#" data-toggle="popover" data-trigger="focus" data-content="We strongly recommend you take out travel insurance before departure in order to adequately cover you and your party. Some airlines may prevent you from travelling if proof of insurance cannot be provided."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Do you have travel insurance?</strong>  <a class="pop-text" href="#" data-toggle="popover" data-placement="bottom"  data-content="We strongly recommend you take out travel insurance before departure in order to adequately cover you and your party. Some airlines may prevent you from travelling if proof of insurance cannot be provided."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
             <div class="radio">
-
-              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#insurance-details-added">Europe Single Trip - <strong>£11.73pp</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.<br>
+              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#insurance-details-added">Europe Single Trip - <strong>&pound;11.73pp</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.<br>
               Cover included (per person):
                 <ul>
-                <li>Up to £10m Emergency Medical Cover</li>
-                <li>Up to £1,500 Personal Possessions Cover</li>
-                <li>Up to £1,250 Cancellation Cover</li>
+                <li>Up to &pound;10m Emergency Medical Cover</li>
+                <li>Up to &pound;1,500 Personal Possessions Cover</li>
+                <li>Up to &pound;1,250 Cancellation Cover</li>
                 </ul>
               </label>
-
             </div>
-
-
 
             <div class="radio">
               <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#insurance-details-true">I have my own insurance, thanks</label>
             </div>
-
           </div>
         </div>
       </div>
@@ -140,33 +127,30 @@
 <!--3rd accordion-->
       <div class="panel panel-default">
 
-        <div class="panel-heading panel-heading--chunky">
-          <div class="panel-status">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
+          <div class="panel-heading">
+            <div class="panel-heading__message">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Do you need parking?</a>
+              Do you need airport parking?
             </h4>
-            <div id="parking-details-true" class="alert alert-success collapse">
-              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
-            </div>
-            <div id="parking-details-added" class="alert alert-success collapse">
-              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Added</strong>
-            </div>
           </div>
-        </div>
+        </a>
 
         <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">
-            <p><strong>Do you need airport parking?</strong>  <a href="#" data-toggle="popover" data-trigger="focus" data-content="We search hundreds of airport car parks to find the best prices for you. Choose from on and off site parking, or meet & greet services."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Do you need airport parking?</strong>  <a href="#" data-toggle="popover" data-placement="bottom" data-content="We search hundreds of airport car parks to find the best prices for you. Choose from on and off site parking, or meet &amp; greet services."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
             <div class="radio">
 
-              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-added">Meet & Greet - <strong>£86.10</strong></label>
+              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-added">Meet & Greet - <strong>&pound;86.10</strong></label>
 
             </div>
 
             <div class="radio">
 
-              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-added">On-Site Parking, JetParks - <strong>£41.99</strong></label>
+              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-added">On-Site Parking, JetParks - <strong>&pound;41.99</strong></label>
 
             </div>
 
@@ -184,20 +168,20 @@
 <!--4th accordion-->
       <div class="panel panel-default">
 
-        <div class="panel-heading panel-heading--chunky">
-          <div class="panel-status">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Check your flights</a>
-            </h4>
-            <div id="customer-flights-true" class="alert alert-success collapse">
-              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="collapsed">
+          <div class="panel-heading">
+            <div class="panel-heading__message">
+              <i class="fa fa-check" aria-hidden="true"></i>
             </div>
+            <h4 class="panel-title">
+              Are your flights correct?
+            </h4>
           </div>
-        </div>
+        </a>
 
         <div id="collapse4" class="panel-collapse collapse">
           <div class="panel-body">
-            <p><strong>Are your flight details correct?</strong>  <a href="#" data-toggle="popover" data-trigger="focus" data-content="Airlines occasionally make adjustments to flights over time, so it's important to reconfirm that the flight times are right."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Are your flight details correct?</strong>  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Airlines occasionally make adjustments to flights over time, so it&#8217;s important to reconfirm that the flight times are right."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
             <h5>Outbound</h5>
             <div class="flight-details-container">
@@ -253,57 +237,18 @@
 
   <!--5th accordion-->
       <div class="panel panel-default">
-        <div class="panel-heading panel-heading--chunky">
-          <div class="panel-status">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="collapsed">
+          <div class="panel-heading">
+            <div class="panel-heading__message">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Do you need a transfer?</a>
+              Are your hotel details correct?
             </h4>
-            <div id="customer-transfers-true" class="alert alert-success collapse">
-              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
-            </div>
-            <div id="customer-transfers-added" class="alert alert-success collapse">
-              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Added</strong>
-            </div>
           </div>
-        </div>
+        </a>
+
         <div id="collapse5" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p><strong>Add transfer</strong>  <a href="#" data-toggle="popover" data-trigger="focus" data-content="Shared shuttle services operate between the airport and main hotel complexes. Alternatively, you can select a private taxi to take you directly to your accommodation."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
-
-            <div class="radio">
-
-              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-added">Shuttle Service (return) - <strong>£14.12pp</strong><br>From Majorca airport<br>Estimated journey time: 1h 15m<br>2 passengers</label>
-
-            </div>
-
-            <div class="radio">
-
-              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-added">Speedy Shuttle (return) Max 4 Stops - <strong>£25.22pp</strong><br>From Majorca airport<br>Estimated journey time: 0h 50m<br>2 passengers</label>
-
-            </div>
-
-            <div class="radio">
-              <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-true">I don't need transfers, thanks</label>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-<!--6th accordion-->
-      <div class="panel panel-default">
-        <div class="panel-heading panel-heading--chunky">
-          <div class="panel-status">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Check your hotel details</a>
-            </h4>
-            <div id="customer-hotel-true" class="alert alert-success collapse">
-              <i class="fa fa-check" aria-hidden="true"></i>  <strong>Done!</strong>
-            </div>
-          </div>
-        </div>
-
-        <div id="collapse6" class="panel-collapse collapse">
           <div class="panel-body">
             <p><strong>Are your hotel details correct?</strong></p>
 
@@ -377,55 +322,93 @@
             </div>
           </div>
         </div>
-      </div>
 
-    </div>
+<!--6th accordion-->
+        <div class="panel panel-default">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="collapsed">
+            <div class="panel-heading">
+              <div class="panel-heading__message">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </div>
+              <h4 class="panel-title">
+                Do you need a transfer?
+              </h4>
+            </div>
+          </a>
+          <div id="collapse6" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p><strong>Add transfer</strong>  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Shared shuttle services operate between the airport and main hotel complexes. Alternatively, you can select a private taxi to take you directly to your accommodation."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
-  </div>
+              <div class="radio">
 
-  <div class="container">
-    <h3>Basket</h3>
+                <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-added">Shuttle Service (return) - <strong>&pound;14.12pp</strong><br>From Majorca airport<br>Estimated journey time: 1h 15m<br>2 passengers</label>
 
-    <div class="basket">
-      <ul>
-        <li>Europe Single Trip - <strong>£11.73pp</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.</li>
-        <li>Meet & Greet - <strong>£86.10</strong></li>
-        <li>Shuttle Service (return) - <strong>£14.12pp</strong></li>
-      </ul>
+              </div>
 
+              <div class="radio">
 
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal">Checkout</button>
+                <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-added">Speedy Shuttle (return) Max 4 Stops - <strong>&pound;25.22pp</strong><br>From Majorca airport<br>Estimated journey time: 0h 50m<br>2 passengers</label>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
+              </div>
 
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Europe Single Trip</h4>
-          </div>
-          <div class="modal-body">
-            <p>By selecting insurance cover you are confirming that those requiring travel insurance are residents of the UK or Channel Islands and are 70 years of age or under. This policy does not provide cover for any of the travelling party or for non-travelling close relatives who may have any pre-existing medical condition(s).<p>
-              <p>If you have a close relative not travelling with you, whose health is a cause for concern and might lead you to cancel or cut short your trip due to their pre-existing medical condition, then please note that this policy does not provide cover for this circumstance.</p>
+              <div class="radio">
+                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-true">I don't need transfers, thanks</label>
+              </div>
 
-              <p>Please read your policy carefully as it contains terms, conditions and exclusions.</p>
-              <ul>
-                <li><a href="#">View the Policy Wording</a></li>
-                <li><a href="#">View the Status Disclosure Document</a></li>
-              </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Accept and confirm</button>
+            </div>
           </div>
         </div>
-
       </div>
+
+    <div class="basket">
+      <div class="row basket__row">
+        <div class="col-xs-12 col-sm-12 col-md-12"><p class="basket__title">Basket</p></div>
+        <div class="col-xs-8 col-sm-8 col-md-8">Europe Single Trip</div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col--align-right">&pound;11.73pp</div>
+        <div class="col-md-9 col--push-down"><span class="basket__additional-info">Travel insurance cover for this trip, for all the eligible members of the travelling party.</span></div>
+        <div class="col-xs-8 col-sm-8 col-md-8 col--push-down">Meet &amp; Greet</div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col--push-down col--align-right">&pound;86.10</div>
+        <div class="col-xs-8 col-sm-8 col-md-8 col--push-down">Shuttle Service (return)</div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col--push-down col--align-right">&pound;14.12pp</div>
+      </div>
+
+      <div class="row basket__row total-divider">
+        <div class="col-xs-6 col-sm-6 col-md-6">Total cost:</div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col--align-right">&pound;189.50</div>
+      </div>
+
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="button" data-toggle="modal" data-target="#myModal">Checkout</button>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Europe Single Trip</h4>
+            </div>
+            <div class="modal-body">
+              <p>By selecting insurance cover you are confirming that those requiring travel insurance are residents of the UK or Channel Islands and are 70 years of age or under. This policy does not provide cover for any of the travelling party or for non-travelling close relatives who may have any pre-existing medical condition(s).<p>
+                <p>If you have a close relative not travelling with you, whose health is a cause for concern and might lead you to cancel or cut short your trip due to their pre-existing medical condition, then please note that this policy does not provide cover for this circumstance.</p>
+
+                <p>Please read your policy carefully as it contains terms, conditions and exclusions.</p>
+                <ul>
+                  <li><a href="#">View the Policy Wording</a></li>
+                  <li><a href="#">View the Status Disclosure Document</a></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Accept and confirm</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--End of modal-->
     </div>
-    <!--End of modal-->
-  </div>
   </div>
 
 </div>

@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+a:hover, a:focus {
+  text-decoration: none;
+}
+
 .header {
   padding-top: 1em;
 }
@@ -35,14 +39,9 @@ a {
   padding: 0;
 }
 
-.basket {
-  background-color: #FEF6C3;
-  padding: .5em;
-  display: block;
-}
-
 .container--white-background {
   background-color: white;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -54,16 +53,68 @@ a {
   padding-right: 1em;
 }
 
-.panel-heading--chunky {
-  border-bottom: 3px solid #DDDDDD!important;
+.panel-heading {
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 0;
+  color: #17317f;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  display: flex;
+  justify-content: center;
+  min-height: 7em;
+  position: relative;
   text-align: center;
-  padding: 2em;
 }
 
-.panel-status {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.panel-heading::after {
+  font-size: 2em;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: 300;
+  font-variant: normal;
+  line-height: 1;
+  position: absolute;
+  right: 0.25em;
+  speak: none;
+  text-transform: none;
+  top: 0;
+  content: "-";
+}
+
+.panel-heading:hover {
+  background-color: #cccccc;
+}
+
+.panel-heading__message {
+  display: none;
+  margin-right: 1em;
+}
+
+.panel-title {
+  font-weight: 300;
+}
+
+.panel-title--completed {
+  display: none;
+}
+
+a.active .panel-heading {
+  background-color: #0091c2;
+  color: #ffffff;
+}
+
+a.completed .panel-heading {
+  background-color: #17317f;
+  color: #ffffff;
+}
+
+a.completed .panel-heading__message {
+  display: inline-block;
+}
+
+a.collapsed .panel-heading::after {
+  content: '+';
 }
 
 .panel-body {
@@ -85,7 +136,7 @@ a {
 }
 
 .holiday-checklist__heading {
-  font-weight: bold;
+  line-height: 1.2em;
   padding: 1em;
   text-align: center;
 }
@@ -95,13 +146,10 @@ a {
   margin: 0 0 0.5em 0;
 }
 
-.alert {
-  width: 30%;
-  margin-bottom: 0;
-  padding: .5rem;
-}
-
 .flight-details-container {
+  display: -webkit-flex;
+  -webkit-align-items: flex-start;
+  -webkit-justify-content: space-between;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -118,4 +166,63 @@ a {
 
 .panel-body h5 {
   border-bottom: 1px solid darkblue;
+}
+
+.button {
+  background-color: #fedc07;
+  border: 0;
+  border-bottom: 3px solid #ebc200;
+  border-radius: 0.2em;
+  color: #17317f;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 1em 0;
+  padding: 0.732em 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.button:hover, .button:focus {
+  background-color: #ebc200;
+  color: #17317f;
+}
+
+.col--align-right {
+  display: -webkit-flex;
+  -webkit-justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.col--push-down {
+  margin-bottom: 2em;
+}
+
+.total-divider {
+  border-top: 1px solid whitesmoke;
+  padding-top: 1em;
+}
+
+.basket {
+  font-weight: 500;
+  padding: .5em 1em;
+  display: block;
+}
+
+.basket__row {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.basket__title {
+  font-size: 1.25em;
+}
+
+.basket__additional-info {
+  font-weight: normal;
 }
