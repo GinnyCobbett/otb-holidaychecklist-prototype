@@ -27,7 +27,7 @@ $(document).ready(function(){
       if(event.target.dataset.target === '#insurance-details-true') {
         $('a[href="#collapse2"] .panel-title').html('Insurance OK');
       } else {
-        $('a[href="#collapse2"] .panel-title').html('Insurance added');
+        $('a[href="#collapse2"] .panel-title').html('Insurance added to basket');
       }
     });
 
@@ -36,7 +36,7 @@ $(document).ready(function(){
       if(event.target.dataset.target === '#parking-details-true') {
         $('a[href="#collapse3"] .panel-title').html('Parking OK');
       } else {
-        $('a[href="#collapse3"] .panel-title').html('Airport parking added');
+        $('a[href="#collapse3"] .panel-title').html('Airport parking added to basket');
       }
     });
 
@@ -55,7 +55,7 @@ $(document).ready(function(){
       if(event.target.dataset.target === '#customer-transfers-true') {
         $('a[href="#collapse6"] .panel-title').html('Transfer OK');
       } else {
-        $('a[href="#collapse6"] .panel-title').html('Transfer added');
+        $('a[href="#collapse6"] .panel-title').html('Transfer added to basket');
       }
     });
 
