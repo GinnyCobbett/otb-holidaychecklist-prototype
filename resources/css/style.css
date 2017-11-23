@@ -230,3 +230,7 @@ a.collapsed .panel-heading::after {
 .close {
   font-size: 1.2em;
 }
+
+.checklist-completed {
+  display: ;
+}

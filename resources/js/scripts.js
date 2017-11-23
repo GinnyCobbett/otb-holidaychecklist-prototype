@@ -31,6 +31,11 @@ $(document).ready(function(){
       }
     });
 
+    $('#collapse2 button[data-target="#insurance-details-true"]').on('click', function(event) {
+      collapseAndShowNext($('a[href="#collapse2"]'), $('a[href="#collapse3"]'));
+      $('a[href="#collapse2"] .panel-title').html('Insurance OK');
+    });
+
     $('#collapse3 input[name="optradio"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse3"]'), $('a[href="#collapse4"]'));
       if(event.target.dataset.target === '#parking-details-true') {
@@ -38,6 +43,11 @@ $(document).ready(function(){
       } else {
         $('a[href="#collapse3"] .panel-title').html('Airport parking added to basket');
       }
+    });
+
+    $('#collapse3 button[data-target="#parking-details-true"]').on('click', function(event) {
+      collapseAndShowNext($('a[href="#collapse3"]'), $('a[href="#collapse4"]'));
+      $('a[href="#collapse3"] .panel-title').html('Parking OK');
     });
 
     $('button[data-target="#customer-flights-true"]').on('click', function() {
@@ -57,6 +67,11 @@ $(document).ready(function(){
       } else {
         $('a[href="#collapse6"] .panel-title').html('Transfer added to basket');
       }
+    });
+
+    $('button[data-target="#customer-transfers-true"]').on('click', function() {
+      collapseAndShowNext($('a[href="#collapse6"]'), $('a[href="#collapse6"]'));
+      $('a[href="#collapse6"] .panel-title').html('Transfer OK');
     });
 
     $('a').on('click', function() {

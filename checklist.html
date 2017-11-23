@@ -27,8 +27,16 @@
       <div class="holiday-checklist__heading">
         <h2 class="holiday-checklist__title">Holiday Checklist</h2>
         <p>Complete your checklist now to get your final booking vouchers, and then relax into holiday mode.</p>
+
+        <div class="checklist-completed">
+          <h4>Congratulations! you've completed your checklist.</h4>
+          <p>An email containing your final holiday vouchers has been sent to ginny.cobbett@onthebeach.co.uk</p>
+        </div>
+
       </div>
     </div>
+
+
 
 <!--Checklist accordion-->
     <div class="panel-group" id="accordion">
@@ -93,7 +101,7 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Are you insured?
+              Check your insurance details
             </h4>
           </div>
         </a>
@@ -101,22 +109,26 @@
         <div id="collapse2" class="panel-collapse collapse">
 
           <div class="panel-body">
-            <p><strong>Do you have travel insurance?</strong>  <a class="pop-text" href="#" data-toggle="popover" data-placement="bottom"  data-content="We strongly recommend you take out travel insurance before departure in order to adequately cover you and your party. Some airlines may prevent you from travelling if proof of insurance cannot be provided."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Your Travel Insurance Policy</strong></p>
 
-            <div class="radio">
-              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#insurance-details-added"><strong>Europe Single Trip - &pound;11.73pp</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.<br>
-              Cover included (per person):
+            <p><strong>Europe Single Trip</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.<br>
+              Cover includes (per person):
                 <ul>
                 <li>Up to &pound;10m Emergency Medical Cover</li>
                 <li>Up to &pound;1,500 Personal Possessions Cover</li>
                 <li>Up to &pound;1,250 Cancellation Cover</li>
                 </ul>
-              </label>
-            </div>
+              </p>
+              <p><strong>Your Travel Insurance Documents</strong><br>
+                <ul>
+                  <li><a target="_blank "href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/20161201/Travel%20Insurance%20Policy%20-%20Rush%20Insurance%20Services%20Limited.pdf">View your Policy Wording</a></li>
+                  <li><a target="_blank" href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/1/Status%20Disclosure%20Document.pdf">View our Status Disclosure Document</a></li>
+                  <li><a target="_blank" href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/1/Pre-existing%20Medical%20Conditions.pdf">View the Pre-existing Medical Condition Disclosure Document</a></li>
+                </ul>
+              </p>
 
-            <div class="radio">
-              <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#insurance-details-true"><strong>I have my own insurance, thanks</strong></label>
-            </div>
+              <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#insurance-details-true">OK</button>
+
           </div>
         </div>
       </div>
@@ -131,32 +143,18 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Do you need airport parking?
+              Check your airport parking arrangements
             </h4>
           </div>
         </a>
 
         <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">
-            <p><strong>Do you need airport parking?</strong>  <a href="#" data-toggle="popover" data-placement="bottom" data-content="We search hundreds of airport car parks to find the best prices for you. Choose from on-site and off-site parking, or meet &amp; greet services."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Your airport parking details</strong>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-            <div class="radio">
+            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#parking-details-true">OK</button>
 
-              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-added"><strong>Meet & Greet - &pound;86.10</strong><br>Meet & Greet<br>This is a meet and greet service</label>
-
-            </div>
-
-            <div class="radio">
-
-              <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-added"><strong>On-Site Parking - &pound;41.99</strong><br>JetParks<br>Transfers every 20 mins</label>
-
-            </div>
-
-
-
-            <div class="radio">
-              <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#parking-details-true"><strong>I don't need parking, thanks</strong></label>
-            </div>
 
           </div>
         </div>
@@ -185,10 +183,12 @@
             <div class="flight-details-container">
               <div class="flight-no">
                 <p>Ryanair FR3445<br>Manchester (MAN) to Palma (PMI)<br>Hold bags: 0</p>
+
               </div>
               <div class="flight-stats">
                 <p>17:10 - 4 July 2018<br><em>arriving 20:50 local time</em><br>flight duration 2h40m</p>
               </div>
+
             </div>
 
             <h5>Inbound</h5>
@@ -271,7 +271,7 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Are your hotel details correct?
+              Check your hotel booking
             </h4>
           </div>
         </a>
@@ -360,88 +360,31 @@
                 <i class="fa fa-check" aria-hidden="true"></i>
               </div>
               <h4 class="panel-title">
-                Do you need a transfer?
+                Check your transfers
               </h4>
             </div>
           </a>
           <div id="collapse6" class="panel-collapse collapse">
             <div class="panel-body">
-              <p><strong>Add transfer</strong>  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Shared shuttle services operate between the airport and main hotel complexes. Alternatively, you can select a private taxi to take you directly to your accommodation."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+              <p><strong>Your transfer details</strong></p>
+              <h5>Shuttle Service (return)</h5>
+              <p>From Majorca airport<br>Estimated journey time: 1h 15m<br>4 passengers</p>
 
-              <div class="radio">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-                <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-added"><strong>Shuttle Service (return) - &pound;14.12pp</strong><br>From Majorca airport<br>Estimated journey time: 1h 15m<br>4 passengers</label>
-
-              </div>
-
-              <div class="radio">
-
-                <label class="radio-option"><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-added"><strong>Speedy Shuttle (return) Max 4 Stops - &pound;25.22pp</strong><br>From Majorca airport<br>Estimated journey time: 0h 50m<br>4 passengers</label>
-
-              </div>
-
-              <div class="radio">
-                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-true"><strong>I don't need transfers, thanks</strong></label>
-              </div>
+              <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-transfers-true">OK</button>
 
             </div>
           </div>
         </div>
       </div>
 
-    <div class="basket">
-      <div class="row basket__row">
-        <div class="col-xs-12 col-sm-12 col-md-12"><p class="basket__title">Basket</p></div>
-        <div class="col-xs-8 col-sm-8 col-md-8">Europe Single Trip</div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col--align-right">&pound;11.73pp</div>
-        <div class="col-md-9 col--push-down"><span class="basket__additional-info">Travel insurance cover for this trip, for all the eligible members of the travelling party.</span></div>
-        <div class="col-xs-8 col-sm-8 col-md-8 col--push-down">Meet &amp; Greet</div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col--push-down col--align-right">&pound;86.10</div>
-        <div class="col-xs-8 col-sm-8 col-md-8 col--push-down">Shuttle Service (return)</div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col--push-down col--align-right">&pound;14.12pp</div>
-      </div>
-
-      <div class="row basket__row total-divider">
-        <div class="col-xs-6 col-sm-6 col-md-6">Total cost:</div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col--align-right">&pound;189.50</div>
-      </div>
-
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="button" data-toggle="modal" data-target="#myModal">Checkout</button>
-
-      <!-- Modal -->
-      <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Europe Single Trip</h4>
-            </div>
-            <div class="modal-body">
-              <p>By selecting insurance cover you are confirming that those requiring travel insurance are residents of the UK or Channel Islands and are 70 years of age or under. This policy does not provide cover for any of the travelling party or for non-travelling close relatives who may have any pre-existing medical condition(s).<p>
-                <p>If you have a close relative not travelling with you, whose health is a cause for concern and might lead you to cancel or cut short your trip due to their pre-existing medical condition, then please note that this policy does not provide cover for this circumstance.</p>
-
-                <p>Please read your policy carefully as it contains terms, conditions and exclusions.</p>
-                <ul>
-                  <li><a href="#">View the Policy Wording</a></li>
-                  <li><a href="#">View the Status Disclosure Document</a></li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Accept and confirm</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <!--End of modal-->
 
     </div>
   </div>
 
 </div>
+
 
 
 </body>
