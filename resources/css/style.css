@@ -226,3 +226,7 @@ a.collapsed .panel-heading::after {
 .basket__additional-info {
   font-weight: normal;
 }
+
+.close {
+  font-size: 1.2em;
+}
