@@ -165,7 +165,7 @@ a.collapsed .panel-heading::after {
 }
 
 .panel-body h5 {
-  border-bottom: 1px solid darkblue;
+  border-bottom: .5px solid #17317f;
 }
 
 .button {
@@ -232,5 +232,31 @@ a.collapsed .panel-heading::after {
 }
 
 .checklist-completed {
-  display: ;
+  display: none;
 }
+
+table {
+    width: 100%;
+    border-collapse:
+    collapse; border-spacing: 0;
+}
+
+td, th {
+    border: 1px solid transparent; /* No more visible border */
+    height: 30px;
+}
+
+th {
+/*    background: #DFDFDF;  /* Darken header a bit */
+    font-weight: bold;
+}
+
+td {
+    text-align: left;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+tr:nth-child(even) td { background: #d5eff9; }
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+tr:nth-child(odd) td { background: #FEFEFE; }
