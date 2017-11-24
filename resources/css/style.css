@@ -146,9 +146,19 @@ a.collapsed .panel-heading::after {
   text-align: center;
 }
 
+.logo {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  padding-right: 1em;
+}
+
 .holiday-checklist__title {
   font-size: 1.75em;
-  margin: 0 0 0.5em 0;
 }
 
 .flight-details-container {
@@ -170,7 +180,7 @@ a.collapsed .panel-heading::after {
 }
 
 .panel-body h5 {
-  border-bottom: 1px solid darkblue;
+  border-bottom: .5px solid #17317f;
 }
 
 .button {
@@ -238,5 +248,32 @@ a.collapsed .panel-heading::after {
 
 .checklist-completed {
   display: none;
-  margin-top: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse:
+    collapse; border-spacing: 0;
+    margin-top: 2em;
+}
+
+td, th {
+    border: 1px solid transparent;
+    height: 30px;
+}
+
+th {
+    font-weight: bold;
+}
+
+td {
+    text-align: left;
+}
+
+tr:nth-child(even) td {
+  background: #d5eff9;
+}
+
+tr:nth-child(odd) td {
+  background: #FEFEFE;
 }

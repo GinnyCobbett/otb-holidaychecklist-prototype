@@ -25,7 +25,10 @@
 
     <div class="holiday-checklist">
       <div class="holiday-checklist__heading">
-        <h2 class="holiday-checklist__title">Holiday Checklist</h2>
+        <div class="logo">
+          <img src="resources/media/checklist ison.svg">
+          <h2 class="holiday-checklist__title">Holiday Checklist</h2>
+        </div>
         <p class="holiday-checklist__intro">Complete your checklist now to get your final booking vouchers, and then relax into holiday mode.</p>
 
         <div class="checklist-completed">
@@ -50,20 +53,50 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Are your details correct?
+              Check your passenger details
             </h4>
           </div>
         </a>
 
         <div id="collapse1" class="panel-collapse collapse in">
           <div class="panel-body">
-            <p><strong>Are the names below exactly as they appear on your passports?</strong>  <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="You&#8217;d be surprised how many customers only notice a spelling mistake when they get to the airport. Even if you haven&#8217;t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
-            <ul class="details">
-              <li>Mr John Doe</li>
-              <li>Mrs Jane Doe</li>
-              <li>Ms Jenny Doe</li>
-              <li>Mr Jimmy Doe</li>
-            </ul>
+            <p><strong>Are your passenger details correct and match your passport?</strong>  <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="You&#8217;d be surprised how many customers only notice a spelling mistake when they get to the airport. Even if you haven&#8217;t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+
+            <table>
+              <tr>
+                <th>Title</th>
+                <th>Firstname</th>
+                <th>Surname</th>
+                <th>Age <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="Age at the time of return"><i class="fa fa-info-circle" aria-hidden="true"></i></a></th>
+              </tr>
+              <tr>
+                <td>Mr</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>18+</td>
+              </tr>
+              <tr>
+                <td>Mrs</td>
+                <td>Jane</td>
+                <td>Doe</td>
+                <td>18+</td>
+              </tr>
+              <tr>
+                <td>Master</td>
+                <td>James</td>
+                <td>Doe</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Miss</td>
+                <td>Judy</td>
+                <td>Doe</td>
+                <td>7</td>
+              </tr>
+            </table>
+
+            <br>
+
             <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-details-true">Yes</button>
 
             <!-- Trigger the modal with a button -->
@@ -83,7 +116,7 @@
                     <p>If you do not want to make a change at this time, please close this box and check 'yes' to continue with your checklist.</p>
                   </div>
                   <div class="modal-footer">
-                    <p>I would like On the Beach to contact me to change my details</p><button type="button" class="btn btn-default" data-dismiss="modal">Call Me</button>
+                    <p>I would like On the Beach to contact me to change my details</p><a href="callback.html"><button type="button" class="btn btn-default">Call Me</button></a>
                   </div>
                 </div>
               </div>
@@ -111,7 +144,8 @@
           <div class="panel-body">
             <p><strong>Your Travel Insurance Policy</strong></p>
 
-            <p><strong>Europe Single Trip</strong><br>Travel insurance cover for this trip, for all the eligible members of the travelling party.<br>
+            <h5>Europe Single Trip</h5>
+            <p>Travel insurance cover for this trip, for all the eligible members of the travelling party.<br>
               Cover includes (per person):
                 <ul>
                 <li>Up to &pound;10m Emergency Medical Cover</li>
@@ -119,6 +153,7 @@
                 <li>Up to &pound;1,250 Cancellation Cover</li>
                 </ul>
               </p>
+
               <p><strong>Your Travel Insurance Documents</strong><br>
                 <ul>
                   <li><a target="_blank "href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/20161201/Travel%20Insurance%20Policy%20-%20Rush%20Insurance%20Services%20Limited.pdf">View your Policy Wording</a></li>
@@ -150,11 +185,46 @@
 
         <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">
-            <p><strong>Your airport parking details</strong>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><strong>Are your airport parking details correct?</strong>
 
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#parking-details-true">OK</button>
+              <h5>On-site Parking, JetParks</h5>
 
+              <div class="flight-details-container">
+                <div class="flight-no">
+
+                    <p>Arrival at carpark: 21/03/2018 15:00<br>Outbound flight: Ryanair FR3445<br>Depart from carpark: 28/03/2018 23:55<br>Inbound flight: Ryanair FR3446</p>
+                </div>
+                <div class="flight-stats">
+                  <p>Car registration: AB12 CDE<br>Make: Ford<br>Model: Fiesta<br>Colour: Red<br>Passengers: 4</p>
+                </div>
+              </div>
+
+              <p>Car Parking Booking Reference: UIHRA</p>
+
+            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#parking-details-true">Yes</button>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#parking-details-false">No</button>
+
+            <!-- Modal -->
+            <div id="parking-details-false" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">Close &times;</button>
+                    <h4 class="modal-title">Making a change to your car parking booking</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Your car parking service is provided by Holiday Extras, a third party. On the Beach act as an intermediary to book this on your behalf with the detail you gave at the time of booking. If you need to make a change, we will contact Holiday Extras for you, but an administration fee may be applied.</p>
+                    <p>If you do not want to make a change at this time, please close this box and check 'yes' to continue with your checklist.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <p>I would like On the Beach to contact me to change my details</p><a href="callback.html"><button type="button" class="btn btn-default">Call Me</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of modal-->
 
           </div>
         </div>
@@ -170,7 +240,7 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Are your flights correct?
+              Check your flights
             </h4>
           </div>
         </a>
@@ -221,7 +291,7 @@
                     <p>If you do not want to make a change at this time, please close this box and check 'yes' to continue with your checklist.</p>
                   </div>
                   <div class="modal-footer">
-                    <p>I would like On the Beach to call me to arrange a change to my flight</p><button type="button" class="btn btn-default" data-dismiss="modal">Call Me</button>
+                    <p>I would like On the Beach to call me to arrange a change to my flight</p><a href="callback.html"><button type="button" class="btn btn-default">Call Me</button></a>
                   </div>
                 </div>
 
@@ -230,6 +300,11 @@
             <!--End of modal-->
             <br>
             <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#customer-flight-info"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;Read your flight check-in instructions</button>
+
+            <p><strong>Baggage allowance</strong>  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Your airline, Ryanair, allows 1 wheelie bag which is 55x40x20cm in size and 1 small bag e.g. handbag, laptop bag etc. Your wheelie bag must not exceed 10kg in weight. This bag should easily fit in the overhead locker. Your small bag must not exceed 35x20x20cm and should easily fit under the seat in front of you. However, unless you add speedy boarding to your booking, your wheelie bag will be placed in the hold at the gate."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+
+            <p>You have no hold bags booked</p>
+
 
             <!-- Modal -->
             <div id="customer-flight-info" class="modal fade" role="dialog">
@@ -244,7 +319,7 @@
                   <div class="modal-body">
                     <p>You are required to check in online for all Ryanair flights. Please print your flight boarding passes prior to arrival at the airport.</p>
                       <p>To check in online please log on to <a href="http://www.ryanair.com">www.ryanair.com</a> and click on "Check-in"at the top of the page.</p>
-                      <p>Your allocated email address is <strong>ginny.cobbett@mailbeacon.net</strong><br>
+                      <p>Your allocated email address is <strong>john.doe@mailbeacon.net</strong><br>
                       Your reservation numbers are: <strong>MYB2471B</strong></p>
                       <p>If you have multiple reservation numbers you will need to follow this check-in procedure for each one.</p>
                       <p>Online check-in will open 60 days before each scheduled flight departure time only if you purchase an allocated seat from the Ryanair website. If you do not wish to select and purchase an allocated seat, you can check-in online between 4 days and 2 hours before each booked flight and will be randomly allocated a seat free of charge. Please note that failure to check in online may result in Ryanair check in fees at the airport. If you have any problems checking in online please send us a message via <strong>My Booking.</strong></p>
@@ -341,7 +416,7 @@
 
                   </div>
                   <div class="modal-footer">
-                    <p>I would like On the Beach to call me to arrange a change to my hotel</p><button type="button" class="btn btn-default" data-dismiss="modal">Call Me</button>
+                    <p>I would like On the Beach to call me to arrange a change to my hotel</p><a href="callback.html"><button type="button" class="btn btn-default">Call Me</button></a>
                   </div>
                 </div>
 
@@ -366,13 +441,39 @@
           </a>
           <div id="collapse6" class="panel-collapse collapse">
             <div class="panel-body">
-              <p><strong>Your transfer details</strong></p>
+              <p><strong>Are your transfer details correct?</strong></p>
               <h5>Shuttle Service (return)</h5>
-              <p>From Majorca airport<br>Estimated journey time: 1h 15m<br>4 passengers</p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Booking contact: Mr John Doe<br>
+              Contact number: 07701 123456<br>
+              Airport pick up location: Palma<br>
+              Resort drop off location: Santa Ponsa</p>
 
-              <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-transfers-true">OK</button>
+              <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-transfers-true">Yes</button>
+
+              <!-- Trigger the modal with a button -->
+              <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-transfers-false">No</button>
+
+              <!-- Modal -->
+              <div id="customer-transfers-false" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">Close &times;</button>
+                      <h4 class="modal-title">Making a change to your transfer</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>If you need to make a change to your transfer, we would need to make this change on your behalf with the Transfer provider. Please note that there may be an administration charge for this service.</p>
+                      <p>If you do not want to make a change at this time, please close this box and check 'yes' to continue with your checklist.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <p>I would like On the Beach to contact me to change my details</p><a href="callback.html"><button type="button" class="btn btn-default">Call Me</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--End of modal-->
 
             </div>
           </div>
