@@ -146,9 +146,19 @@ a.collapsed .panel-heading::after {
   text-align: center;
 }
 
+.logo {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  padding-right: 1em;
+}
+
 .holiday-checklist__title {
   font-size: 1.75em;
-  margin: 0 0 0.5em 0;
 }
 
 .flight-details-container {
@@ -238,25 +248,22 @@ a.collapsed .panel-heading::after {
 
 .checklist-completed {
   display: none;
-<<<<<<< HEAD
+  margin-top: 2em;
 }
 
 table {
     width: 100%;
     border-collapse:
     collapse; border-spacing: 0;
-=======
-  margin-top: 2em;
->>>>>>> 17674de5c0135ed8e33f210d6eb8eb775533d4ec
+    margin-top: 2em;
 }
 
 td, th {
-    border: 1px solid transparent; /* No more visible border */
+    border: 1px solid transparent;
     height: 30px;
 }
 
 th {
-/*    background: #DFDFDF;  /* Darken header a bit */
     font-weight: bold;
 }
 
@@ -264,8 +271,10 @@ td {
     text-align: left;
 }
 
-/* Cells in even rows (2,4,6...) are one color */
-tr:nth-child(even) td { background: #d5eff9; }
+tr:nth-child(even) td {
+  background: #d5eff9;
+}
 
-/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
-tr:nth-child(odd) td { background: #FEFEFE; }
+tr:nth-child(odd) td {
+  background: #FEFEFE;
+}
