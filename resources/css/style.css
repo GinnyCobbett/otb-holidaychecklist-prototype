@@ -65,6 +65,7 @@ a:hover, a:focus {
   min-height: 7em;
   position: relative;
   text-align: center;
+  transition: all 0.2s ease-in;
 }
 
 .panel-heading::after {
@@ -127,6 +128,10 @@ a.collapsed .panel-heading::after {
 
 .panel-default > .panel-heading {
   color: #17317f;
+}
+
+.panel-collapse {
+  transition: all 0.3s ease-in;
 }
 
 .holiday-checklist {
@@ -232,5 +237,6 @@ a.collapsed .panel-heading::after {
 }
 
 .checklist-completed {
-  display: ;
+  display: none;
+  margin-top: 2em;
 }

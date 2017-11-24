@@ -72,6 +72,8 @@ $(document).ready(function(){
     $('button[data-target="#customer-transfers-true"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse6"]'), $('a[href="#collapse6"]'));
       $('a[href="#collapse6"] .panel-title').html('Transfer OK');
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      $('.checklist-completed').show();
     });
 
     $('a').on('click', function() {
