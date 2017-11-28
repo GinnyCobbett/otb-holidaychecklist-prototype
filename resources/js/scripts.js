@@ -73,6 +73,7 @@ $(document).ready(function(){
       collapseAndShowNext($('a[href="#collapse6"]'), $('a[href="#collapse6"]'));
       $('a[href="#collapse6"] .panel-title').html('Transfer OK');
       $("html, body").animate({ scrollTop: 0 }, "slow");
+      $('.holiday-checklist__intro').hide();
       $('.checklist-completed').show();
     });
 

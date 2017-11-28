@@ -248,7 +248,6 @@ a.collapsed .panel-heading::after {
 
 .checklist-completed {
   display: none;
-  margin-top: 2em;
 }
 
 table {
