@@ -72,12 +72,18 @@ $(document).ready(function(){
     $('button[data-target="#customer-transfers-true"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse6"]'), $('a[href="#collapse6"]'));
       $('a[href="#collapse6"] .panel-title').html('Transfer OK');
-      $("html, body").animate({ scrollTop: 0 }, "slow");
-      $('.holiday-checklist__intro').hide();
-      $('.checklist-completed').show();
+      $('.button').removeAttr('disabled');
     });
 
     $('a').on('click', function() {
       toggleActive($(this));
+    });
+
+    $('.button').on('click', function() {
+      if ($('.accordion-panel.completed').length === 6) {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $('.holiday-checklist__intro').hide();
+        $('.checklist-completed').show();
+      }
     });
 });

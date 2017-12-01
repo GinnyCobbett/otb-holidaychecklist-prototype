@@ -183,6 +183,10 @@ a.collapsed .panel-heading::after {
   border-bottom: .5px solid #17317f;
 }
 
+.button-wrapper {
+  padding: 0 1em;
+}
+
 .button {
   background-color: #fedc07;
   border: 0;
@@ -205,6 +209,17 @@ a.collapsed .panel-heading::after {
 .button:hover, .button:focus {
   background-color: #ebc200;
   color: #17317f;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  border-bottom: 3px solid #cccccc;
+  border-radius: 0.2em;
+  color: #666666;
 }
 
 .col--align-right {
