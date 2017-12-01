@@ -258,7 +258,8 @@ a.collapsed .panel-heading::after {
 }
 
 .close {
-  font-size: 1.2em;
+  font-size: 1em;
+  opacity: .7;
 }
 
 .checklist-completed {
@@ -291,4 +292,8 @@ tr:nth-child(even) td {
 
 tr:nth-child(odd) td {
   background: #FEFEFE;
+}
+
+.modal-footer span {
+  padding-right: 1.5em;
 }
