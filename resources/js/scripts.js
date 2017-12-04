@@ -5,6 +5,7 @@ $(document).ready(function(){
     });
 
     var collapseAndShowNext = function(current, next) {
+      $(current).removeClass('incomplete');
       $(current).addClass('completed');
       $(next).click();
       toggleActive(next);
@@ -19,7 +20,6 @@ $(document).ready(function(){
 
     $('button[data-target="#customer-details-true"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse1"]'), $('a[href="#collapse2"]'));
-      $('a[href="#collapse1"] .panel-title').html('Details OK');
     });
 
     $('#collapse2 input[name="optradio"]').on('click', function(event) {
@@ -33,7 +33,6 @@ $(document).ready(function(){
 
     $('#collapse2 button[data-target="#insurance-details-true"]').on('click', function(event) {
       collapseAndShowNext($('a[href="#collapse2"]'), $('a[href="#collapse3"]'));
-      $('a[href="#collapse2"] .panel-title').html('Insurance OK');
     });
 
     $('#collapse3 input[name="optradio"]').on('click', function() {
@@ -47,17 +46,14 @@ $(document).ready(function(){
 
     $('#collapse3 button[data-target="#parking-details-true"]').on('click', function(event) {
       collapseAndShowNext($('a[href="#collapse3"]'), $('a[href="#collapse4"]'));
-      $('a[href="#collapse3"] .panel-title').html('Parking OK');
     });
 
     $('button[data-target="#customer-flights-true"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse4"]'), $('a[href="#collapse5"]'));
-      $('a[href="#collapse4"] .panel-title').html('Flights OK');
     });
 
     $('button[data-target="#customer-hotel-true"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse5"]'), $('a[href="#collapse6"]'));
-      $('a[href="#collapse5"] .panel-title').html('Hotel OK');
     });
 
     $('#collapse6 input[name="optradio"]').on('click', function() {
@@ -71,13 +67,54 @@ $(document).ready(function(){
 
     $('button[data-target="#customer-transfers-true"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse6"]'), $('a[href="#collapse6"]'));
-      $('a[href="#collapse6"] .panel-title').html('Transfer OK');
-      $("html, body").animate({ scrollTop: 0 }, "slow");
-      $('.holiday-checklist__intro').hide();
-      $('.checklist-completed').show();
     });
 
     $('a').on('click', function() {
       toggleActive($(this));
+    });
+
+    $('.btn').on('click', function() {
+      if ($('.accordion-panel.completed').length === 6) {
+        $('.button-checkout').prop('disabled', false);
+      }
+      if ($('.accordion-panel.incomplete').length === 0) {
+        $('.additional-info').hide();
+      }
+    })
+
+    $('.button-checkout').on('click', function() {
+      if ($('.accordion-panel.completed').length === 6) {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $('.holiday-checklist__intro').hide();
+        $('.checklist-completed').show();
+      } else {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $('.holiday-checklist__intro').hide();
+        $('.checklist-incomplete').show();
+      }
+    });
+
+    $('.button-change-details').on('click', function() {
+      var options = ['#collapse1', '#collapse2', '#collapse3', '#collapse4', '#collapse5', '#collapse6'];
+      var activePanel = $(this).closest('.panel-collapse').prev('.accordion-panel');
+      var href = $(activePanel).attr('href');
+      var position = options.indexOf(href) + 1;
+      var currentPanel = 'a[href="' + href + '"]';
+      var nextPanel = 'a[href="' + options[position] + '"]';
+
+      if (currentPanel === 'a[href="#collapse6"]') {
+        $(currentPanel).click();
+        $(currentPanel).removeClass('active');
+      } else {
+        $(nextPanel).click();
+      }
+      $('.button-checkout').prop('disabled', true);
+      $('.additional-info').show();
+      $(activePanel).removeClass('completed');
+      $(activePanel).addClass('incomplete');
+    });
+
+    $('.additional-info textarea').bind('input propertychange', function() {
+      $('.button-checkout').prop('disabled', false);
     });
 });

@@ -118,6 +118,34 @@ a.collapsed .panel-heading::after {
   content: '+';
 }
 
+a.incomplete .panel-heading {
+  background-color: #666666;
+  color: #ffffff;
+}
+
+.panel-title .panel-title--complete,
+.panel-title .panel-title--incomplete {
+  display: none;
+}
+
+a.completed .panel-title--default,
+a.completed .panel-title--incomplete {
+  display: none;
+}
+
+a.completed .panel-title--complete {
+  display: inline-block;
+}
+
+a.incomplete .panel-title--default,
+a.incomplete .panel-title--complete {
+  display: none;
+}
+
+a.incomplete .panel-title--incomplete {
+  display: inline-block;
+}
+
 .panel-body {
   background-color: #f0f9fd;
 }
@@ -207,6 +235,17 @@ a.collapsed .panel-heading::after {
   color: #17317f;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  border-bottom: 3px solid #cccccc;
+  border-radius: 0.2em;
+  color: #666666;
+}
+
 .col--align-right {
   display: -webkit-flex;
   -webkit-justify-content: flex-end;
@@ -247,7 +286,8 @@ a.collapsed .panel-heading::after {
   opacity: .7;
 }
 
-.checklist-completed {
+.checklist-completed,
+.checklist-incomplete {
   display: none;
 }
 
@@ -281,4 +321,18 @@ tr:nth-child(odd) td {
 
 .modal-footer span {
   padding-right: 1.5em;
+}
+
+.continue-wrapper {
+  padding: 0 1em;
+}
+
+.continue-wrapper textarea {
+  font-size: 16px;
+  margin-top: 1em;
+  resize: none;
+}
+
+.additional-info {
+  display: none;
 }

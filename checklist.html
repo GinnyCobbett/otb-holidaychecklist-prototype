@@ -36,6 +36,11 @@
           <p>An email containing your final holiday vouchers has been sent to jane.doe@mailnet.co.uk</p>
         </div>
 
+        <div class="checklist-incomplete">
+          <h4>Thank you, you've completed your checklist</h4>
+          <p>An agent will be in touch with you shortly to confirm your changes</p>
+        </div>
+
       </div>
     </div>
 
@@ -47,13 +52,17 @@
 <!--1st accordion-->
       <div class="panel panel-default">
 
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="active">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="active accordion-panel">
           <div class="panel-heading">
             <div class="panel-heading__message">
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Check your details
+              <span class="panel-title--default">Check your details</span>
+              <span class="panel-title--complete">Details OK</span>
+              <span class="panel-title--incomplete">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Change required
+              </span>
             </h4>
           </div>
         </a>
@@ -117,7 +126,7 @@
                     <p>If you do not want to make a change at this time, please close this dialog box and check 'yes' to continue with your checklist, otherwise click 'Confirm and continue' to register a change is needed.</p>
                   </div>
                   <div class="modal-footer">
-                    <span>My details need to be changed</span><button type="button" class="btn btn-default" data-dismiss="modal">Confirm and continue</button>
+                    <span>My details need to be changed</span><button type="button" class="btn btn-default button-change-details" data-dismiss="modal">Confirm and continue</button>
                   </div>
                 </div>
               </div>
@@ -129,13 +138,14 @@
 
 <!--2nd accordion-->
       <div class="panel panel-default">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed accordion-panel">
           <div class="panel-heading">
             <div class="panel-heading__message">
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Check your insurance
+              <span class="panel-title--default">Check your insurance</span>
+              <span class="panel-title--complete">Insurance OK</span>
             </h4>
           </div>
         </a>
@@ -167,13 +177,17 @@
 <!--3rd accordion-->
       <div class="panel panel-default">
 
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed accordion-panel">
           <div class="panel-heading">
             <div class="panel-heading__message">
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Check your airport parking
+              <span class="panel-title--default">Check your airport parking</span>
+              <span class="panel-title--complete">Parking OK</span>
+              <span class="panel-title--incomplete">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Change required
+              </span>
             </h4>
           </div>
         </a>
@@ -208,7 +222,7 @@
                     <p>If you do not want to make a change at this time, please close this dialog box and check 'yes' to continue with your checklist, otherwise click 'Confirm and continue' to register a change is needed.</p>
                   </div>
                   <div class="modal-footer">
-                    <span>My details need to be changed</span><button type="button" class="btn btn-default" data-dismiss="modal">Confirm and continue</button>
+                    <span>My details need to be changed</span><button type="button" class="btn btn-default button-change-details" data-dismiss="modal">Confirm and continue</button>
                   </div>
                 </div>
               </div>
@@ -223,13 +237,17 @@
 <!--4th accordion-->
       <div class="panel panel-default">
 
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="collapsed">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="collapsed accordion-panel">
           <div class="panel-heading">
             <div class="panel-heading__message">
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Check your flights
+              <span class="panel-title--default">Check your flights</span>
+              <span class="panel-title--complete">Flights OK</span>
+              <span class="panel-title--incomplete">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Change required
+              </span>
             </h4>
           </div>
         </a>
@@ -321,7 +339,7 @@
                     <p>If you do not want to make a change at this time, please close this dialog box and check 'yes' to continue with your checklist, otherwise click 'Confirm and continue' to register a change is needed.</p>
                   </div>
                   <div class="modal-footer">
-                    <span>My details need to be changed</span><button type="button" class="btn btn-default" data-dismiss="modal">Confirm and continue</button>
+                    <span>My details need to be changed</span><button type="button" class="btn btn-default button-change-details" data-dismiss="modal">Confirm and continue</button>
                   </div>
                 </div>
 
@@ -335,13 +353,17 @@
 
   <!--5th accordion-->
       <div class="panel panel-default">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="collapsed">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="collapsed accordion-panel">
           <div class="panel-heading">
             <div class="panel-heading__message">
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              Check your hotel booking
+              <span class="panel-title--default">Check your hotel booking</span>
+              <span class="panel-title--complete">Hotel OK</span>
+              <span class="panel-title--incomplete">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Change required
+              </span>
             </h4>
           </div>
         </a>
@@ -412,7 +434,7 @@
                     <p>If you do not want to make a change at this time, please close this dialog box and check 'yes' to continue with your checklist, otherwise click 'Confirm and continue' to register a change is needed.</p>
                   </div>
                   <div class="modal-footer">
-                    <span>My details need to be changed</span><button type="button" class="btn btn-default" data-dismiss="modal">Confirm and continue</button>
+                    <span>My details need to be changed</span><button type="button" class="btn btn-default button-change-details" data-dismiss="modal">Confirm and continue</button>
                   </div>
                 </div>
 
@@ -425,13 +447,17 @@
 
 <!--6th accordion-->
         <div class="panel panel-default">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="collapsed">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="collapsed accordion-panel">
             <div class="panel-heading">
               <div class="panel-heading__message">
                 <i class="fa fa-check" aria-hidden="true"></i>
               </div>
               <h4 class="panel-title">
-                Check your transfers
+                <span class="panel-title--default">Check your transfers</span>
+                <span class="panel-title--complete">Transfer OK</span>
+                <span class="panel-title--incomplete">
+                  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Change required
+                </span>
               </h4>
             </div>
           </a>
@@ -466,7 +492,7 @@
                       <p>If you do not want to make a change at this time, please close this dialog box and check 'yes' to continue with your checklist, otherwise click 'Confirm and continue' to register a change is needed.</p>
                     </div>
                     <div class="modal-footer">
-                      <span>My details need to be changed</span><button type="button" class="btn btn-default" data-dismiss="modal">Confirm and continue</button>
+                      <span>My details need to be changed</span><button type="button" class="btn btn-default button-change-details" data-dismiss="modal">Confirm and continue</button>
                     </div>
                   </div>
                 </div>
@@ -477,8 +503,13 @@
           </div>
         </div>
       </div>
-
-
+      <div class="continue-wrapper">
+        <div class="additional-info">
+          <label>Please explain what changes are required and an agent will be in touch</label>
+          <textarea class="form-control" rows="8"></textarea>
+        </div>
+        <button class="button button--primary button-checkout" disabled>Continue</button>
+      </div>
     </div>
   </div>
 
