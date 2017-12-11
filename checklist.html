@@ -29,16 +29,16 @@
           <img src="resources/media/checklist ison.svg">
           <h2 class="holiday-checklist__title">Holiday Checklist</h2>
         </div>
-        <p class="holiday-checklist__intro">Details of your booking are in the checklist below for you to check and confirm. Complete the checklist to get your final booking vouchers, and then relax into holiday mode!</p>
+        <p class="holiday-checklist__intro">All your holiday booking details have been pulled together in the checklist below. Simply check you are happy with your booking, and we'll send a confirmation when you're done.</p>
 
         <div class="checklist-completed">
-          <h4>Congratulations! you've completed your checklist.</h4>
-          <p>An email containing your final holiday vouchers has been sent to richika.manchester@gmail.com</p>
+          <h4>Congratulations! you're all done!</h4>
+          <p>An email confimring your booking details has been sent to richika.manchester@gmail.com</p>
         </div>
 
         <div class="checklist-incomplete">
-          <h4>Thank you, a change request has been sent.</h4>
-          <p>An agent will be in touch with you to assist with your changes.</p>
+          <h4>Thanks, we have received your change request.</h4>
+          <p>An agent will call you back within xxx to discuss your booking.</p>
         </div>
 
       </div>
@@ -58,10 +58,10 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              <span class="panel-title--default">Check your details</span>
-              <span class="panel-title--complete">Details OK</span>
+              <span class="panel-title--default">First, check your party details</span>
+              <span class="panel-title--complete">Great! Your details are all good</span>
               <span class="panel-title--incomplete">
-                <i class="fa fa-check" aria-hidden="true"></i> Change required
+                <i class="fa fa-check" aria-hidden="true"></i> Thanks, your party change request has been saved
               </span>
             </h4>
           </div>
@@ -69,61 +69,74 @@
 
         <div id="collapse1" class="panel-collapse collapse in">
           <div class="panel-body">
-
+            <p><strong>Your booking party:</strong></p>
               <table>
               <tr>
-                <th>Title</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Age <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="Please confirm the age of any children in your party at the time of return"><i class="fa fa-info-circle" aria-hidden="true"></i></a></th>
+                <th>Lead<br>booker?</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Age <!--<a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="Please confirm the age of any children in your party at the time of return"><i class="fa fa-info-circle" aria-hidden="true"></i></a> --></th>
               </tr>
               <tr>
-                <td>Mr</td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
                 <td>Richika</td>
                 <td>Manchester</td>
                 <td>18+</td>
               </tr>
               <tr>
-                <td>Mrs</td>
+                <td></td>
                 <td>Ash</td>
                 <td>Manchester</td>
                 <td>18+</td>
               </tr>
               <tr>
-                <td>Master</td>
+                <td></td>
                 <td>Joey</td>
                 <td>Manchester</td>
                 <td>10</td>
               </tr>
               <tr>
-                <td>Miss</td>
+                <td></td>
                 <td>Tam</td>
                 <td>Manchester</td>
                 <td>7</td>
               </tr>
             </table>
 
-            <br>
-            <p><strong>Are the details above correct?</strong>  <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="You&#8217;d be surprised how many customers only notice a spelling mistake when they get to the airport. Even if you haven&#8217;t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <span class="spacer"></span>
+            <p><strong>Are you happy with these details?</strong>  <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="You&#8217;d be surprised how many customers only notice a spelling mistake when they get to the airport. Even if you haven&#8217;t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
 
             <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-details-true">Yes</button>
 
-            <!-- Trigger the modal with a button -->
+            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">No</button>
+
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                <p>Airline/hotel providers do not require titles, middle names or punctuations. If your first name, last name or age of any children needs to be changed, please provide details in the box below, select 'Request change' to save your information and finish checking the rest of your booking. </p>
+
+                <textarea class="form-control" rows="2"></textarea>
+
+                <span class="spacer"></span>
+
+                  <button type="button" class="btn btn-primary btn-block button-change-details" data-dismiss="modal">Request change</button>
+
+              </div>
+            </div>
+
+            <!--
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-details-false">No</button>
 
-            <!-- Modal -->
             <div id="customer-details-false" class="modal fade" role="dialog">
               <div class="modal-dialog">
-                <!-- Modal content-->
+
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">Close &times;</button>
                     <h4 class="modal-title">Making a change to your details</h4>
                   </div>
                   <div class="modal-body">
-                    <p>Airline/hotel providers do not require titles, middle names or punctuations so if a mistake involving those will not need to be changed. If you need to amend the spelling of your name or surname, you may be charged an administrative fee for changing these details. As you are close to departure, we will need to contact you by phone to make this change.</p>
-                    <p>If you do not want to make a change at this time, please close this dialog box and check 'yes' to continue with your checklist, otherwise click 'Request change' to register an issue.</p>
+                    <p>Airline/hotel providers do not require titles, middle names or punctuations. If the spelling of your name or age of any children needs to be changed, select 'Request change' and check the box next to the entry to be changed. Please continue with the checklist and you will be able submit all your changes at the end. A request will go to our Contact Centre and a representative will phone you back within xxx.</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close &times;</button><button type="button" class="btn btn-default button-change-details" data-dismiss="modal">Request change</button>
@@ -131,7 +144,9 @@
                 </div>
               </div>
             </div>
-            <!--End of modal-->
+            -->
+
+
           </div>
         </div>
       </div>
@@ -144,8 +159,8 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              <span class="panel-title--default">Check your insurance</span>
-              <span class="panel-title--complete">Insurance OK</span>
+              <span class="panel-title--default">Travel insurance</span>
+              <span class="panel-title--complete">Nice! Your insurance is done</span>
             </h4>
           </div>
         </a>
@@ -153,7 +168,7 @@
         <div id="collapse2" class="panel-collapse collapse">
 
           <div class="panel-body">
-            <p><strong>Your Travel Insurance Policy</strong></p>
+            <p><strong>Your policy:</strong></p>
 
             <h5>Europe Single Trip</h5>
             <p>2 x Adult<br>
@@ -163,11 +178,11 @@
               Policy start date: 04/07/2018<br>
               Policy end date: 11/07/2018</p>
 
-              <p><strong>Your Travel Insurance Documents</strong><br>
+              <p><strong>Your documents:</strong><br>
                 <ul>
-                  <li><a target="_blank "href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/20161201/Travel%20Insurance%20Policy%20-%20Rush%20Insurance%20Services%20Limited.pdf">View your Policy Wording</a></li>
-                  <li><a target="_blank" href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/1/Status%20Disclosure%20Document.pdf">View our Status Disclosure Document</a></li>
-                  <li><a target="_blank" href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/1/Pre-existing%20Medical%20Conditions.pdf">View the Pre-existing Medical Condition Disclosure Document</a></li>
+                  <li><a target="_blank "href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/20161201/Travel%20Insurance%20Policy%20-%20Rush%20Insurance%20Services%20Limited.pdf">View your Policy Wording  <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+                  <li><a target="_blank" href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/1/Status%20Disclosure%20Document.pdf">View our Status Disclosure Document  <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+                  <li><a target="_blank" href="https://s3-eu-west-1.amazonaws.com/otb-insurance-documents/1/Pre-existing%20Medical%20Conditions.pdf">View the Pre-existing Medical Condition Disclosure Document  <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
                 </ul>
               </p>
 
@@ -187,10 +202,10 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              <span class="panel-title--default">Check your airport parking</span>
-              <span class="panel-title--complete">Parking OK</span>
+              <span class="panel-title--default">Airport parking</span>
+              <span class="panel-title--complete">Done! You've checked your parking is OK</span>
               <span class="panel-title--incomplete">
-                <i class="fa fa-check" aria-hidden="true"></i> Change required
+                <i class="fa fa-check" aria-hidden="true"></i> Thanks, your parking change request has been saved
               </span>
             </h4>
           </div>
@@ -198,24 +213,61 @@
 
         <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">
+            <p><strong>Your airport parking:</strong></p>
 
               <h5>On-site Parking</h5>
 
-              <p>Arrival at carpark: 04/07/2018<br>Depart from carpark: 11/07/2018</p>
+              <div class="flight-details-container">
+                <div class="flight-no">
+                  <p>Arrival at carpark:<br>
+                  Departure from carpark:</p>
+                  <p>Make:<br>
+                    Model:<br>
+                    Colour:<br>
+                    Registration:</p>
+
+                </div>
+                <div class="flight-stats">
+                  <p>4 July 2018<br>
+                    11 July 2018</p>
+                  <p>Ford<br>
+                    Fiesta<br>
+                    Pink<br>
+                    MW59 BFY</p>
+                </div>
+
+              </div>
 
               <p>Car Parking Booking Reference: RT123</p>
 
-              <p><strong>Are the details above correct?</strong></p>
+              <span class="spacer"></span>
+
+              <p><strong>Are you happy with these details?</strong></p>
 
 
             <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#parking-details-true">Yes</button>
-            <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#parking-details-false">No</button>
 
-            <!-- Modal -->
+            <!-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#parking-details-false">No</button> -->
+
+            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">No</button>
+
+            <div class="collapse" id="collapseExample2">
+              <div class="card card-body">
+                <p>Your car parking service is provided by Holiday Extras, a third party. If you need to make a change to this booking, On the Beach will contact Holiday Extras on your behalf. Please provide details in the box below, select 'Request change' to save your information and finish checking the rest of your booking. </p>
+
+                <textarea class="form-control" rows="2"></textarea>
+
+                <span class="spacer"></span>
+
+                  <button type="button" class="btn btn-primary btn-block button-change-details" data-dismiss="modal">Request change</button>
+
+              </div>
+            </div>
+
+            <!--
             <div id="parking-details-false" class="modal fade" role="dialog">
               <div class="modal-dialog">
-                <!-- Modal content-->
+
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">Close &times;</button>
@@ -231,7 +283,7 @@
                 </div>
               </div>
             </div>
-            <!--End of modal-->
+            -->
 
           </div>
         </div>
@@ -247,10 +299,10 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              <span class="panel-title--default">Check your flights</span>
-              <span class="panel-title--complete">Flights OK</span>
+              <span class="panel-title--default">Your flights</span>
+              <span class="panel-title--complete">Great! Your flight details are correct</span>
               <span class="panel-title--incomplete">
-                <i class="fa fa-check" aria-hidden="true"></i> Change required
+                <i class="fa fa-check" aria-hidden="true"></i> Thanks, your flight change request has been saved
               </span>
             </h4>
           </div>
@@ -259,6 +311,8 @@
         <div id="collapse4" class="panel-collapse collapse">
           <div class="panel-body">
 
+            <p><strong>Your flights:</strong></p>
+
             <h5>Outbound</h5>
             <div class="flight-details-container">
               <div class="flight-no">
@@ -266,7 +320,7 @@
 
               </div>
               <div class="flight-stats">
-                <p>12:05 - 4 July 2018<br><em>arriving 15:50 local time</em><br>flight duration 2h40m</p>
+                <p>4 July 2018</p>
               </div>
 
             </div>
@@ -277,25 +331,57 @@
                 <p>Ryanair FR3446<br>Palma (PMI) to Manchester (MAN)</p>
               </div>
               <div class="flight-stats">
-                <p>21:30 - 11 July 2018<br><em>arriving 23:20 local time</em><br>flight duration 2h50m</p>
+                <p>11 July 2018</p>
               </div>
             </div>
 
-            <h5>Your in-flight extras</h5>
-            <p><i class="fa fa-check" aria-hidden="true"></i>   Hold luggage  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Ryanair allows 20 kg per person for hold luggage."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <h5>In-flight extras</h5>
+            <div class="flight-details-container">
+              <div class="flight-no">
+                <p>Hold luggage  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Ryanair allows 20 kg per person for hold luggage."><i class="fa fa-info-circle" aria-hidden="true"></i></a><br>
+                Pre-booked seats</p>
+              </div>
+              <div class="flight-stats">
+                <p>2 bags<br>
+                2 seats</p>
+              </div>
+            </div>
 
+            <span class="spacer"></span>
 
-            <p>Carry-on baggage allowance  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Your airline, Ryanair, allows 1 wheelie bag which is 55x40x20cm in size and 1 small bag e.g. handbag, laptop bag etc. Your wheelie bag must not exceed 10kg in weight. This bag should easily fit in the overhead locker. Your small bag must not exceed 35x20x20cm and should easily fit under the seat in front of you. However, unless you add speedy boarding to your booking, your wheelie bag will be placed in the hold at the gate."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Important flight information</strong></p>
 
+            <button class="btn btn-info btn-block" type="button" data-toggle="collapse" data-target="#collapseflight1" aria-expanded="false" aria-controls="collapseflight1"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;Carry-on baggage allowance</button>
+
+            <div class="collapse" id="collapseflight1">
+              <div class="card card-body">
+                <p>Your airline, Ryanair, allows 1 wheelie bag which is 55x40x20cm in size and 1 small bag e.g. handbag, laptop bag etc. Your wheelie bag must not exceed 10kg in weight. This bag should easily fit in the overhead locker. Your small bag must not exceed 35x20x20cm and should easily fit under the seat in front of you. However, unless you add speedy boarding to your booking, your wheelie bag will be placed in the hold at the gate.</p>
+              </div>
+            </div>
             <br>
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#customer-flight-info"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;Ryanair check-in instructions</button>
+
+            <button class="btn btn-warning btn-block" type="button" data-toggle="collapse" data-target="#collapseflight2" aria-expanded="false" aria-controls="collapseflight2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;Ryanair check-in instructions</button>
+
+            <div class="collapse" id="collapseflight2">
+              <div class="card card-body">
+                <p>You are required to check in online for all Ryanair flights. Please print your flight boarding passes prior to arrival at the airport.</p>
+                  <p>To check in online please log on to <a href="http://www.ryanair.com">www.ryanair.com  <i class="fa fa-external-link" aria-hidden="true"></i></a> and click on "Check-in"at the top of the page.</p>
+                  <p>Your allocated email address is <br><strong>richika.manchester@j-zoing.com</strong><br>
+                  Your reservation numbers are: <br><strong>123123</strong></p>
+                  <p>If you have multiple reservation numbers you will need to follow this check-in procedure for each one.</p>
+                  <p>Online check-in will open 60 days before each scheduled flight departure time only if you purchase an allocated seat from the Ryanair website. If you do not wish to select and purchase an allocated seat, you can check-in online between 4 days and 2 hours before each booked flight and will be randomly allocated a seat free of charge. Please note that failure to check in online may result in Ryanair check in fees at the airport. If you have any problems checking in online please send us a message via <strong>My Booking.</strong></p>
+              </div>
+            </div>
+<!--
+                        <br>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#customer-flight-info"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;Ryanair check-in instructions</button> -->
 
 
-            <!-- Modal -->
+            <!--
             <div id="customer-flight-info" class="modal fade" role="dialog">
               <div class="modal-dialog">
 
-                <!-- Modal content-->
+
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -317,21 +403,36 @@
 
               </div>
             </div>
-            <!--End of modal-->
+            -->
 
-            <p></p>
+            <span class="spacer"></span>
 
-            <p><strong>Are the details above correct?</strong>  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Airlines sometimes adjust flights over time, so it&#8217;’s important to check that flight times are correct."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p><strong>Are you happy that your flighs are OK?</strong>  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Airlines sometimes adjust flights over time, so it&#8217;’s important to check that flight times are correct."><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
             <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-flights-true">Yes</button>
-            <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-flights-false">No</button>
 
-            <!-- Modal -->
+<!--            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-flights-false">No</button> -->
+
+            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">No</button>
+
+            <div class="collapse" id="collapseExample3">
+              <div class="card card-body">
+                <p>If you have made changes to this flight directly with the flight carrier (including adding bags or pre booking seats), we won't have that information so you don't need to do anything. However, if you want us to make a change to your flights, please provide details in the box below, select 'Request change' to save your information and finish checking the rest of your booking. Please note that flights are 100% non-refundable.</p>
+
+                <textarea class="form-control" rows="2"></textarea>
+
+                <span class="spacer"></span>
+
+                  <button type="button" class="btn btn-primary btn-block button-change-details" data-dismiss="modal">Request change</button>
+              </div>
+            </div>
+
+
+            <!--
             <div id="customer-flights-false" class="modal fade" role="dialog">
               <div class="modal-dialog">
 
-                <!-- Modal content-->
+
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">Close &times;</button>
@@ -349,7 +450,7 @@
 
               </div>
             </div>
-            <!--End of modal-->
+            -->
 
             </div>
         </div>
@@ -363,10 +464,10 @@
               <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <h4 class="panel-title">
-              <span class="panel-title--default">Check your hotel booking</span>
-              <span class="panel-title--complete">Hotel OK</span>
+              <span class="panel-title--default">Your accommodation</span>
+              <span class="panel-title--complete">OK! That's your accommodation checked<br>You're nearly done!</span>
               <span class="panel-title--incomplete">
-                <i class="fa fa-check" aria-hidden="true"></i> Change required
+                <i class="fa fa-check" aria-hidden="true"></i> Thanks, your accommodation change request has been saved
               </span>
             </h4>
           </div>
@@ -374,6 +475,7 @@
 
         <div id="collapse5" class="panel-collapse collapse">
           <div class="panel-body">
+            <p><strong>Your accommodation:</strong></p>
 
             <h5>Holiday Center, Santa Ponsa, Majorca, Balearics</h5>
             <p>Board basis: Self Catering<br>
@@ -382,15 +484,29 @@
             Duration: 7 Nights<br>
             Guests: 2 Adults, 2 Children</p>
 
-            <br>
-            <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#customer-hotel-info"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;An in-resort tourism tax applies to this hotel</button>
+            <span class="spacer"></span>
 
-            <!-- Modal -->
+            <p><strong>Important resort information</strong></p>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-warning btn-block" data-toggle="collapse" data-target="#customer-hotel-info"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;An in-resort tourism tax applies to this hotel</button>
+
+            <div class="collapse" id="customer-hotel-info">
+              <div class="card card-body">
+                <p>From 1st of July 2016, the Balearic Govt. are charging a sustainable tourism tax on all overnight stays which will be payable on arrival in the hotel:
+                  <ul>
+                    <li>5-star & 4-star superior hotels: €2 per night</li>
+                    <li>4-star & 3-star superior hotel: €1.5 per night</li>
+                    <li>1-star, 2-star & 3-star hotels: €1 per night</li>
+                    <li>4-key & 4-key superior tourist apartments: €2 per night</li></ul>
+
+                    Exclusions: Children under the age of 16 are exempt from the tax, 50% discount during the off-peak season (Nov 1st - Apr 30th) & 50% discount from the tenth night of any stay onwards</p>
+              </div>
+            </div>
+            <!--
             <div id="customer-hotel-info" class="modal fade" role="dialog">
               <div class="modal-dialog">
 
-                <!-- Modal content-->
+
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -414,19 +530,37 @@
 
               </div>
             </div>
-            <!--End of modal-->
-            <p></p>
-            <p><strong>Are the details above correct?</strong></p>
+            -->
+
+            <span class="spacer"></span>
+
+            <p><strong>Are you happy that this is correct?</strong></p>
 
             <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-hotel-true">Yes</button>
-            <!-- Trigger the modal with a button -->
+
+            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">No</button>
+
+            <div class="collapse" id="collapseExample4">
+              <div class="card card-body">
+                <p>If you need to make any changes to your accommodation, please provide details in the box below, select 'Request change' to save your information and finish checking the rest of your booking. </p>
+
+                <textarea class="form-control" rows="2"></textarea>
+
+                <span class="spacer"></span>
+
+                  <button type="button" class="btn btn-primary btn-block button-change-details" data-dismiss="modal">Request change</button>
+
+              </div>
+            </div>
+
+            <!--
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-hotel-false">No</button>
 
-            <!-- Modal -->
+
             <div id="customer-hotel-false" class="modal fade" role="dialog">
               <div class="modal-dialog">
 
-                <!-- Modal content-->
+
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">Close &times;</button>
@@ -444,7 +578,8 @@
 
               </div>
             </div>
-            <!--End of modal-->
+            -->
+
             </div>
           </div>
         </div>
@@ -457,34 +592,52 @@
                 <i class="fa fa-check" aria-hidden="true"></i>
               </div>
               <h4 class="panel-title">
-                <span class="panel-title--default">Check your transfers</span>
-                <span class="panel-title--complete">Transfer OK</span>
+                <span class="panel-title--default">Transfers</span>
+                <span class="panel-title--complete">Good job! Your transfer details are OK</span>
                 <span class="panel-title--incomplete">
-                  <i class="fa fa-check" aria-hidden="true"></i> Change required
+                  <i class="fa fa-check" aria-hidden="true"></i> Thanks, your transfer change request has been saved
                 </span>
               </h4>
             </div>
           </a>
           <div id="collapse6" class="panel-collapse collapse">
             <div class="panel-body">
+              <p><strong>Your transfers:</strong></p>
+
               <h5>Shuttle Service (return)</h5>
 
               <p>Transfer to: <strong>Holiday Center</strong><br>
                 2 Adults + 2 Children + baggage<br>
               Reference: RT-23123</p>
 
-              <p></p>
-              <p><strong>Are the details above correct?</strong></p>
+              <span class="spacer"></span>
+
+              <p><strong>Are you happy with your transfer details?</strong></p>
 
               <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#customer-transfers-true">Yes</button>
 
-              <!-- Trigger the modal with a button -->
+              <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">No</button>
+
+              <div class="collapse" id="collapseExample5">
+                <div class="card card-body">
+                  <p>If you need to make any changes to your transfers, please provide details in the box below, select 'Request change' to save your information and finish checking the rest of your booking. </p>
+
+                    <textarea class="form-control" rows="2"></textarea>
+
+                    <span class="spacer"></span>
+
+                      <button type="button" class="btn btn-primary btn-block button-change-details" data-dismiss="modal">Request change</button>
+
+                </div>
+              </div>
+
+              <!--
               <button type="button" class="btn btn-default" data-toggle="modal" data-target="#customer-transfers-false">No</button>
 
-              <!-- Modal -->
+
               <div id="customer-transfers-false" class="modal fade" role="dialog">
                 <div class="modal-dialog">
-                  <!-- Modal content-->
+
                   <div class="modal-content">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">Close &times;</button>
@@ -500,18 +653,22 @@
                   </div>
                 </div>
               </div>
-              <!--End of modal-->
+              -->
 
             </div>
           </div>
         </div>
       </div>
+
       <div class="continue-wrapper">
+        <!--
         <div class="additional-info">
           <label>Please provide a brief explanation for the changes that are required. When done, select 'Continue' and an agent will be in touch. Please note that changes may incur an administration fee to process.</label>
           <textarea class="form-control" rows="8"></textarea>
-        </div>
-        <button class="button button--primary button-checkout" disabled>Continue</button>
+        </div> -->
+
+        <label>When you're done, select 'Submit' to send your change request and one of our agents will call you back within xxx. You may be charged an admin fee for making a change. Read our <a href="">Terms of booking</a> for details.</label>
+        <button class="button button--primary button-checkout" disabled>Submit</button>
       </div>
     </div>
   </div>

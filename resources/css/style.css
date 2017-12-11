@@ -48,6 +48,10 @@ a:hover, a:focus {
   margin: .25rem 0 1rem 0;
 }*/
 
+.spacer {
+  margin: 1.5em;
+}
+
 .panel-group {
   padding-left: 1em;
   padding-right: 1em;
@@ -295,7 +299,6 @@ table {
     width: 100%;
     border-collapse:
     collapse; border-spacing: 0;
-    margin-top: 2em;
 }
 
 td, th {
@@ -310,6 +313,16 @@ th {
 td {
     text-align: left;
 }
+
+
+th:nth-child(4), td:nth-child(4) {
+  text-align: center;
+}
+
+th:nth-child(5), td:nth-child(5) {
+  text-align: center;
+}
+
 
 tr:nth-child(even) td {
   background: #d5eff9;
@@ -336,4 +349,8 @@ tr:nth-child(odd) td {
 
 .additional-info {
   display: none;
+}
+
+.card {
+  padding-top: 1em;
 }
