@@ -354,3 +354,7 @@ tr:nth-child(odd) td {
 .card {
   padding-top: 1em;
 }
+
+.fa-plane {
+  padding: 0 0.5em;
+}
