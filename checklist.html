@@ -690,9 +690,14 @@
           <label>Please provide a brief explanation for the changes that are required. When done, select 'Continue' and an agent will be in touch. Please note that changes may incur an administration fee to process.</label>
           <textarea class="form-control" rows="8"></textarea>
         </div> -->
+        <label class="no-changes-text">Initial text here</label>
+        <label class="callback-text">When you're done, select 'Submit' to send your change request and one of our agents will call you back within xxx. You may be charged an admin fee for making a change. Read our <a href="">Terms of booking</a> for details.</label>
 
-        <label>When you're done, select 'Submit' to send your change request and one of our agents will call you back within xxx. You may be charged an admin fee for making a change. Read our <a href="">Terms of booking</a> for details.</label>
-        <button class="button button--primary button-checkout" disabled>Submit</button>
+        <form action="success.html" id="checklist-complete">
+          <button class="button button--primary button-checkout" type="submit" disabled>
+              Submit
+          </button>
+        </form>
       </div>
     </div>
   </div>

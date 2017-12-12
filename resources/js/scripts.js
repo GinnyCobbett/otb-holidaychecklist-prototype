@@ -9,6 +9,7 @@ $(document).ready(function(){
       $(current).addClass('completed');
       $(next).click();
       toggleActive(next);
+      checkIfCompleted();
     };
 
     var toggleActive = function(element) {
@@ -16,6 +17,25 @@ $(document).ready(function(){
         $(this).toggleClass('active');
       });
       $(element).toggleClass('active');
+    };
+
+    var checkIfCompleted = function() {
+      var numberCompleted = $('.accordion-panel.completed').length;
+      var numberIncomplete = $('.accordion-panel.incomplete').length;
+
+      if (numberIncomplete > 0) {
+        $('.no-changes-text').hide();
+        $('.callback-text').show();
+        $('#checklist-complete').attr('action', 'callback.html')
+      } else {
+        $('.no-changes-text').show();
+        $('.callback-text').hide();
+        $('#checklist-complete').attr('action', 'success.html')
+      }
+
+      if (numberCompleted + numberIncomplete === 6) {
+        $('.button-checkout').prop('disabled', false);
+      }
     };
 
     $('button[data-target="#customer-details-true"]').on('click', function() {
@@ -73,15 +93,6 @@ $(document).ready(function(){
       toggleActive($(this));
     });
 
-    $('.btn').on('click', function() {
-      if ($('.accordion-panel.completed').length === 6) {
-        $('.button-checkout').prop('disabled', false);
-      }
-      if ($('.accordion-panel.incomplete').length === 0) {
-        $('.additional-info').hide();
-      }
-    })
-
     $('.button-checkout').on('click', function() {
       if ($('.accordion-panel.completed').length === 6) {
         $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -112,9 +123,7 @@ $(document).ready(function(){
       $('.additional-info').show();
       $(activePanel).removeClass('completed');
       $(activePanel).addClass('incomplete');
-    });
 
-    $('.additional-info textarea').bind('input propertychange', function() {
-      $('.button-checkout').prop('disabled', false);
+      checkIfCompleted();
     });
 });

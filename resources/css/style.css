@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -357,4 +358,12 @@ tr:nth-child(odd) td {
 
 .fa-plane {
   padding: 0 0.5em;
+}
+
+.callback-text {
+  display: none;
+}
+
+textarea {
+  resize: none;
 }
