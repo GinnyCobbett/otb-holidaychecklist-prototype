@@ -367,3 +367,7 @@ tr:nth-child(odd) td {
 textarea {
   resize: none;
 }
+
+.normal-container {
+  text-align: left;
+}
