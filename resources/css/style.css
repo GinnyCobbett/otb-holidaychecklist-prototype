@@ -356,6 +356,10 @@ tr:nth-child(odd) td {
   padding-top: 1em;
 }
 
+.fa-plane {
+  padding: 0 0.5em;
+}
+
 .callback-text {
   display: none;
 }
