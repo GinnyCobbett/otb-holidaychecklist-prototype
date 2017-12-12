@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -353,4 +354,12 @@ tr:nth-child(odd) td {
 
 .card {
   padding-top: 1em;
+}
+
+.callback-text {
+  display: none;
+}
+
+textarea {
+  resize: none;
 }
