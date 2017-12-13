@@ -396,3 +396,50 @@ textarea {
   min-width: 25%;
   text-align: right;
 }
+
+.option {
+  display: none;
+}
+
+.option__selection {
+  display: inline-block;
+  height: 1.7em;
+  margin-right: 1em;
+  position: relative;
+  width: 1.7em;
+}
+
+.option__selection::before {
+    background-color: white;
+    border: 1px solid #17317f;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+
+input[type="radio"]:checked + .option__selection::before {
+  border-color: #00a5dd;
+}
+
+input[type="radio"]:checked + .option__selection::after {
+  background-color: #17317f;
+  border-radius: 50%;
+  content: "";
+  height: 1.0625em;
+  width: 1.0625em;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #17317f;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+
+.ancillary__label {
+  font-size: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 1.5em 1em;
+}

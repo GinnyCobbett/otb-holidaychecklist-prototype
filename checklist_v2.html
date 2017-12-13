@@ -126,7 +126,7 @@
             <p><strong>You don't appear to have travel insurance</strong>  <a class="pop-text" href="#" data-toggle="popover" data-placement="bottom"  data-content="We strongly recommend you take out travel insurance before departure in order to adequately cover you and your party. Some airlines may prevent you from travelling if proof of insurance cannot be provided."><i class="fa fa-info-circle" aria-hidden="true"></i></a><br>
             Why not add it to your booking now and be rest assured that you're covered for your holiday?</p>
 
-              <div class="checklist-ancillary-product__container">
+              <!-- <div class="checklist-ancillary-product__container">
                 <div class="checklist-ancillary-product">
                   <div class="checklist-ancillary-product__detail">
                     <p><strong>Europe Single Trip</strong></p>
@@ -142,14 +142,48 @@
                   </div>
                 </div>
                 <button type="button" class="button button--primary" data-toggle="collapse" data-target="#insurance-details-added">Add to booking</button>
+              </div> -->
+              <label class="ancillary__label" for="insurance-europe">
+                <div class="row">
+                  <div class="col-xs-11">
+                    <div class="row">
+                      <div class="col-xs-8 ancillary-option__column">
+                        <h5 class="ancillary-option__title">
+                          Europe Single Trip
+                        </h5>
+                        <p>
+                          Travel insurance cover for this trip, for all the eligible members of the travelling party.
+                        </p>
+                        <p>
+                          <strong>Cover included (per person):</strong>
+                        </p>
+                        <ul>
+                          <li>Up to £10m Emergency Medical Cover</li><li>Up to £1,500 Personal Possessions Cover</li><li>Up to £1,250 Cancellation Cover</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-4 ancillary-option__column">
+                        <span class="ancillary-option__price">
+                          £11.73 pp
+                        </span>
+                        <div class="ancillary-option__sub-text">
+                        (Includes Insurance Premium Tax)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-1">
+                    <input class="option" type="radio" name="insurance-option" id="insurance-europe">
+                    <span class="option__selection"></span>
+                  </div>
+                </div>
+              </label>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <label><input type="radio" name="insurance-option" data-toggle="collapse" data-target="#insurance-details-true"><strong>I have my own insurance, thanks</strong></label>
+                </div>
               </div>
-
-            <span class="spacer"></span>
-
-            <div class="radio">
-              <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#insurance-details-true"><strong>I have my own insurance, thanks</strong></label>
-            </div>
-
           </div>
         </div>
       </div>
