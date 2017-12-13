@@ -378,8 +378,9 @@ textarea {
 .checklist-ancillary-product__container {
   border: .5px solid #0091C27F;
   padding: .5em;
-  background-color: #FFFFFF7F;
+  background-color: #FFFFFF9F;
 }
+
 .checklist-ancillary-product {
   display: flex;
   justify-content: space-between;
