@@ -45,10 +45,14 @@ $(document).ready(function(){
     $('#collapse2 input[name="optradio"]').on('click', function(event) {
       collapseAndShowNext($('a[href="#collapse2"]'), $('a[href="#collapse3"]'));
       if(event.target.dataset.target === '#insurance-details-true') {
-        $('a[href="#collapse2"] .panel-title').html('Insurance OK');
+        $('a[href="#collapse2"] .panel-title').html('OK! Your insurance is sorted');
       } else {
-        $('a[href="#collapse2"] .panel-title').html('Insurance added to basket');
+        $('a[href="#collapse2"] .panel-title').html('Travel insurance added to your basket');
       }
+    });
+
+    $('button[data-target="#insurance-details-added"]').on('click', function() {
+      collapseAndShowNext($('a[href="#collapse2"]'), $('a[href="#collapse3"]'));
     });
 
     $('#collapse2 button[data-target="#insurance-details-true"]').on('click', function(event) {
@@ -58,10 +62,14 @@ $(document).ready(function(){
     $('#collapse3 input[name="optradio"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse3"]'), $('a[href="#collapse4"]'));
       if(event.target.dataset.target === '#parking-details-true') {
-        $('a[href="#collapse3"] .panel-title').html('Parking OK');
+        $('a[href="#collapse3"] .panel-title').html("Gotcha! You don't need parking");
       } else {
-        $('a[href="#collapse3"] .panel-title').html('Airport parking added to basket');
+        $('a[href="#collapse3"] .panel-title').html('Airport parking added to your basket');
       }
+    });
+
+    $('button[data-target="#parking-details-added"]').on('click', function() {
+      collapseAndShowNext($('a[href="#collapse3"]'), $('a[href="#collapse4"]'));
     });
 
     $('#collapse3 button[data-target="#parking-details-true"]').on('click', function(event) {
@@ -79,13 +87,17 @@ $(document).ready(function(){
     $('#collapse6 input[name="optradio"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse6"]'), $('a[href="#collapse6"]'));
       if(event.target.dataset.target === '#customer-transfers-true') {
-        $('a[href="#collapse6"] .panel-title').html('Transfer OK');
+        $('a[href="#collapse6"] .panel-title').html('Transfer not needed - You are all done!');
       } else {
         $('a[href="#collapse6"] .panel-title').html('Transfer added to basket');
       }
     });
 
     $('button[data-target="#customer-transfers-true"]').on('click', function() {
+      collapseAndShowNext($('a[href="#collapse6"]'), $('a[href="#collapse6"]'));
+    });
+
+    $('button[data-target="#transfers-details-added"]').on('click', function() {
       collapseAndShowNext($('a[href="#collapse6"]'), $('a[href="#collapse6"]'));
     });
 

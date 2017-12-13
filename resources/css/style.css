@@ -227,7 +227,6 @@ a.incomplete .panel-title--incomplete {
   font-size: 1em;
   font-weight: bold;
   line-height: 1.25;
-  margin: 1em 0;
   padding: 0.732em 1em;
   position: relative;
   text-align: center;
@@ -249,6 +248,10 @@ a.incomplete .panel-title--incomplete {
   border-bottom: 3px solid #cccccc;
   border-radius: 0.2em;
   color: #666666;
+}
+
+.button-checkout {
+  margin: 1em 0;
 }
 
 .col--align-right {
@@ -370,4 +373,25 @@ textarea {
 
 .normal-container {
   text-align: left;
+}
+
+.checklist-ancillary-product__container {
+  border: .5px solid #0091C27F;
+  padding: .5em;
+  background-color: #FFFFFF7F;
+}
+.checklist-ancillary-product {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.checklist-ancillary-product p {
+  margin: 0;
+}
+
+.checklist-ancillary-product__price {
+  font-weight: bold;
+  min-width: 25%;
+  text-align: right;
 }
