@@ -1,4 +1,3 @@
-<<<<<<< current
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,7 +59,8 @@
             </div>
             <h4 class="panel-title">
               <span class="panel-title--default">First, check your party details</span>
-              <span class="panel-title--complete">Great! Your details are all good</span>
+              <span class="panel-title--complete">
+                <i class="fa fa-check" aria-hidden="true"></i> Great! Your details are correct</span>
               <span class="panel-title--incomplete">
                 <i class="fa fa-check" aria-hidden="true"></i> Thanks, your party change request has been saved
               </span>
@@ -70,7 +70,7 @@
 
         <div id="collapse1" class="panel-collapse collapse in">
           <div class="panel-body">
-            <p><strong>Your booking party:</strong></p>
+            <p class="panel-body-title">Your booking party:</p>
 
             <h5>Lead passenger:</h5>
             <p>Richika Manchester <em>adult</em></p>
@@ -81,8 +81,7 @@
             Tim Manchester <em>child, age 7</em></p>
 
 
-            <span class="spacer"></span>
-            <p><strong>Are you happy with these details?</strong>  <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="You&#8217;d be surprised how many customers only notice a spelling mistake when they get to the airport. Even if you haven&#8217;t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+            <p class="panel-body-title">Are you happy with these details?  <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="You&#8217;d be surprised how many customers only notice a spelling mistake when they get to the airport. Even if you haven&#8217;t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
 
 
             <button type="button" class="btn btn-default" data-toggle="collapse" data-action="complete" data-target="#customer-details-true">Yes</button>
@@ -95,9 +94,8 @@
 
                 <textarea class="form-control" rows="2"></textarea>
 
-                <span class="spacer"></span>
 
-                  <button type="button" class="btn btn-primary btn-block button-change-details" data-action="change" data-dismiss="modal">Request change</button>
+                <button type="button" class="btn btn-primary btn-block button-change-details" data-action="change" data-dismiss="modal">Request change</button>
 
               </div>
             </div>
@@ -116,8 +114,8 @@
             </div>
             <h4 class="panel-title">
               <span class="panel-title--default">Travel insurance</span>
-              <span class="panel-title--complete"><i class="fa fa-check" aria-hidden="true"></i> OK! Your insurance is sorted</span>
-              <span class="panel-title--added">We've added travel insurance to your basket</span>
+              <span class="panel-title--complete"><i class="fa fa-check" aria-hidden="true"></i> OK, you don't need insurance</span>
+              <span class="panel-title--added"><i class="fa fa-check" aria-hidden="true"></i> We've added travel insurance to your basket</span>
             </h4>
           </div>
         </a>
@@ -125,8 +123,10 @@
         <div id="collapse2" class="panel-collapse collapse">
 
           <div class="panel-body">
-            <p><strong>You don't appear to have travel insurance</strong>  <a class="pop-text" href="#" data-toggle="popover" data-placement="bottom"  data-content="We strongly recommend you take out travel insurance before departure in order to adequately cover you and your party. Some airlines may prevent you from travelling if proof of insurance cannot be provided."><i class="fa fa-info-circle" aria-hidden="true"></i></a><br>
-            Why not add it to your booking now and be rest assured that you're covered for your holiday?</p>
+            <div class="alert alert-warning" role="alert">
+              <strong><i class="fa fa-exclamation-triangle"></i> You don't appear to have travel insurance</strong><br>
+              Why not add it now and be rest assured that you're covered for your holiday?
+            </div>
 
             <label class="ancillary__label" for="insurance-europe">
               <div class="ancillary__left">
@@ -162,15 +162,23 @@
 
             <label class="ancillary__label" for="insurance-none">
               <div class="ancillary__left">
+                <div>
                 <h6 class="ancillary__title">
-                  I have my own insurance, thanks
+                  I don't need insurance, thanks
                 </h6>
+                <p>
+                  <div class="alert alert-info" role="alert">
+                    <i class="fa fa-info-circle"></i> We strongly recommend you take out travel insurance before departure in order to adequately cover you and your party. Some airlines may prevent you from travelling if proof of insurance cannot be provided.
+                  </div>
+                </p>
               </div>
               <div class="ancillary__right">
                 <input class="option" type="radio" name="insurance-option" id="insurance-none" />
                 <span class="option__selection"></span>
               </div>
             </label>
+
+            </div>
           </div>
         </div>
       </div>
@@ -186,7 +194,7 @@
             </div>
             <h4 class="panel-title">
               <span class="panel-title--default">Airport parking</span>
-              <span class="panel-title--complete">Gotcha! You don't need parking</span>
+              <span class="panel-title--complete"><i class="fa fa-check" aria-hidden="true"></i> Gotcha! You don't need parking</span>
               <span class="panel-title--added">
                 <i class="fa fa-check" aria-hidden="true"></i> We've added airport parking to your basket
               </span>
@@ -196,8 +204,9 @@
 
         <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">
-            <p><strong>You haven't booked airport parking</strong><br>
-            Why not take the hassle out of planning your holiday and add airport parking now? We search hundreds of car parks at airports across the country to find the best prices for you:</p>
+            <div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-triangle"></i> <strong>You haven't booked airport parking</strong><br>
+            Why not take the hassle out of planning your holiday and add airport parking now? We search hundreds of car parks at airports across the country to find the best prices for you
+            </div>
 
             <label class="ancillary__label" for="parking-meet">
               <div class="ancillary__left">
@@ -304,7 +313,7 @@
             </div>
             <h4 class="panel-title">
               <span class="panel-title--default">Your flights</span>
-              <span class="panel-title--complete">Great! Your flight details are correct</span>
+              <span class="panel-title--complete"><i class="fa fa-check" aria-hidden="true"></i> Great! Your flight details are correct</span>
               <span class="panel-title--incomplete">
                 <i class="fa fa-check" aria-hidden="true"></i> Thanks, your flight change request has been saved
               </span>
@@ -315,7 +324,7 @@
         <div id="collapse4" class="panel-collapse collapse">
           <div class="panel-body">
 
-            <p><strong>Your flights:</strong></p>
+            <p class="panel-body-title">Your flights:</p>
 
             <h5>Outbound</h5>
             <div class="flight-details-container">
@@ -351,9 +360,8 @@
               </div>
             </div>
 
-            <span class="spacer"></span>
 
-            <p><strong>Important flight information</strong></p>
+            <p class="panel-body-title">Important flight information:</p>
 
             <button class="btn btn-info btn-block" type="button" data-toggle="collapse" data-target="#collapseflight1" aria-expanded="false" aria-controls="collapseflight1"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;Carry-on baggage allowance</button>
 
@@ -377,9 +385,7 @@
               </div>
             </div>
 
-            <span class="spacer"></span>
-
-            <p><strong>Are you happy that your flighs are OK?</strong></p>
+            <p class="panel-body-title">Are you happy that your flights are OK?</p>
 
             <button type="button" class="btn btn-default" data-toggle="collapse" data-action="complete" data-target="#customer-flights-true">Yes</button>
 
@@ -391,7 +397,6 @@
 
                 <textarea class="form-control" rows="2"></textarea>
 
-                <span class="spacer"></span>
 
                   <button type="button" class="btn btn-primary btn-block button-change-details" data-action="change" data-dismiss="modal">Request change</button>
               </div>
@@ -410,7 +415,7 @@
             </div>
             <h4 class="panel-title">
               <span class="panel-title--default">Your accommodation</span>
-              <span class="panel-title--complete">OK! That's your accommodation checked<br>You're nearly done!</span>
+              <span class="panel-title--complete"><i class="fa fa-check" aria-hidden="true"></i> OK! That's your accommodation checked<br>You're nearly done!</span>
               <span class="panel-title--incomplete">
                 <i class="fa fa-check" aria-hidden="true"></i> Thanks, your accommodation change request has been saved
               </span>
@@ -420,7 +425,8 @@
 
         <div id="collapse5" class="panel-collapse collapse">
           <div class="panel-body">
-            <p><strong>Your accommodation:</strong></p>
+            <p class="panel-body-title">Your accommodation:</p>
+
 
             <h5>Holiday Center, Santa Ponsa, Majorca, Balearics</h5>
             <p>Board basis: Self Catering<br>
@@ -429,9 +435,7 @@
             Duration: 7 Nights<br>
             Guests: 2 Adults, 2 Children</p>
 
-            <span class="spacer"></span>
-
-            <p><strong>Important resort information</strong></p>
+            <p class="panel-body-title">Important resort information:</p>
 
             <button type="button" class="btn btn-warning btn-block" data-toggle="collapse" data-target="#customer-hotel-info"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;An in-resort tourism tax applies to this hotel</button>
 
@@ -448,9 +452,7 @@
               </div>
             </div>
 
-            <span class="spacer"></span>
-
-            <p><strong>Are you happy that this is correct?</strong></p>
+            <p class="panel-body-title">Are you happy that this is correct?</p>
 
             <button type="button" class="btn btn-default" data-toggle="collapse" data-action="complete" data-target="#customer-hotel-true">Yes</button>
 
@@ -462,9 +464,7 @@
 
                 <textarea class="form-control" rows="2"></textarea>
 
-                <span class="spacer"></span>
-
-                  <button type="button" class="btn btn-primary btn-block button-change-details" data-action="change" data-dismiss="modal">Request change</button>
+                <button type="button" class="btn btn-primary btn-block button-change-details" data-action="change" data-dismiss="modal">Request change</button>
 
               </div>
             </div>
@@ -484,7 +484,7 @@
               </div>
               <h4 class="panel-title">
                 <span class="panel-title--default">Transfers</span>
-                <span class="panel-title--complete">Transfer not needed - You are all done!</span>
+                <span class="panel-title--complete"><i class="fa fa-check" aria-hidden="true"></i> Transfer not needed - You are all done!</span>
                 <span class="panel-title--added">
                   <i class="fa fa-check" aria-hidden="true"></i> We've added transfer details to your basket
                 </span>
@@ -494,64 +494,9 @@
           <div id="collapse6" class="panel-collapse collapse">
             <div class="panel-body">
 
-              <p><strong>You don't appear to have booked a transfer yet.</strong><br>
-                Why not add a transfer to your booking now? We offer the best deals to get you from the airport to your destination so your holiday can begin even much quicker!</p>
-
-              <!-- <div class="checklist-ancillary-product__container">
-                <div class="checklist-ancillary-product">
-                  <div class="checklist-ancillary-product__detail">
-                    <p><strong>Shuttle Service (return)</strong></p>
-                    <p>From Majorca airport</p>
-                    <p>Estimated journey time: 1h 15m</p>
-                    <p>4 passengers</p>
-                  </div>
-                  <div class="checklist-ancillary-product__price">
-                    <p>&pound;13.91 pp</p>
-                  </div>
-                </div>
-                <button type="button" class="button button--primary" data-toggle="collapse" data-target="#transfers-details-added">Add to booking</button>
+              <div class="alert alert-warning" role="alert"><i class="fa fa-exclamation-triangle"></i> <strong>You don't appear to have a transfer booked.</strong><br>
+                Why not add a transfer now? We offer the best deals to get you from the airport to your destination so your holiday can begin even sooner!
               </div>
-
-              <span class="spacer"></span>
-
-              <div class="checklist-ancillary-product__container">
-                <div class="checklist-ancillary-product">
-                  <div class="checklist-ancillary-product__detail">
-                    <p><strong>Speedy Shuttle (return) Max 4 Stops</strong></p>
-                    <p>From Majorca airport</p>
-                    <p>Estimated journey time: 0h 50m</p>
-                    <p>4 passengers</p>
-                  </div>
-                  <div class="checklist-ancillary-product__price">
-                    <p>&pound;24.84 pp</p>
-                  </div>
-                </div>
-                <button type="button" class="button button--primary" data-toggle="collapse" data-target="#transfers-details-added">Add to booking</button>
-              </div>
-
-              <span class="spacer"></span>
-
-
-              <div class="checklist-ancillary-product__container">
-                <div class="checklist-ancillary-product">
-                  <div class="checklist-ancillary-product__detail">
-                    <p><strong>Private Taxi (return)</strong></p>
-                    <p>From Majorca airport</p>
-                    <p>Estimated journey time: 0h 35m</p>
-                    <p>4 passengers</p>
-                  </div>
-                  <div class="checklist-ancillary-product__price">
-                    <p>&pound;41.76 pp</p>
-                  </div>
-                </div>
-                <button type="button" class="button button--primary" data-toggle="collapse" data-target="#transfers-details-added">Add to booking</button>
-              </div>
-
-              <span class="spacer"></span>
-
-              <div class="radio">
-                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-true"><strong>I don't need tranfers, thanks</strong></label>
-              </div> -->
 
               <label class="ancillary__label" for="transfer-shuttle">
                 <div class="ancillary__left">
@@ -662,17 +607,13 @@
 
 
       <div class="continue-wrapper">
-        <!--
-        <div class="additional-info">
-          <label>Please provide a brief explanation for the changes that are required. When done, select 'Continue' and an agent will be in touch. Please note that changes may incur an administration fee to process.</label>
-          <textarea class="form-control" rows="8"></textarea>
-        </div> -->
-        <label class="no-changes-text">When you're done, select 'Submit' and we'll send you a confirmation of all your booking details by email.</label>
+
+        <label class="no-changes-text">When you've finished checking your details, select 'Continue' to review your basket and check out.</label>
         <label class="callback-text">When you're done, select 'Submit' to send your change request and one of our agents will call you back within xxx. You may be charged an admin fee for making a change. Read our <a href="">Terms of booking</a> for details.</label>
 
         <form action="success.html" id="checklist-complete">
           <button class="button button--primary button-checkout" type="submit" disabled>
-              Submit
+              Continue
           </button>
         </form>
       </div>
@@ -685,691 +626,3 @@
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="resources/css/style.css" type="text/css">
-  <script src="https://use.fontawesome.com/a5eabba441.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="resources/js/script-ancillaries.js"></script>
-  <title>Holiday Checklist Prototype</title>
-
-
-</head>
-<body>
-  <div class="header">
-    <div class="container">
-      <a href="#" class="header__logo">
-        On The Beach
-      </a>
-    </div>
-  </div>
-
-  <div class="container container--white-background">
-
-    <div class="holiday-checklist">
-      <div class="holiday-checklist__heading">
-        <div class="logo">
-          <img src="resources/media/checklist ison.svg">
-          <h2 class="holiday-checklist__title">Holiday Checklist</h2>
-        </div>
-        <p class="holiday-checklist__intro">All your holiday booking details have been pulled together in the checklist below. Simply check you are happy with your booking, and we'll send a confirmation when you're done.</p>
-
-        <div class="checklist-completed">
-          <h4>Congratulations! you're all done!</h4>
-          <p>An email confimring your booking details has been sent to richika.manchester@gmail.com</p>
-        </div>
-
-        <div class="checklist-incomplete">
-          <h4>Thanks, we have received your change request.</h4>
-          <p>An agent will call you back within xxx to discuss your booking.</p>
-        </div>
-
-      </div>
-    </div>
-
-
-
-<!--Checklist accordion-->
-    <div class="panel-group" id="accordion">
-
-<!--1st accordion-->
-      <div class="panel panel-default" id="party-panel">
-
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="active accordion-panel">
-          <div class="panel-heading">
-            <div class="panel-heading__message">
-              <i class="fa fa-check" aria-hidden="true"></i>
-            </div>
-            <h4 class="panel-title">
-              <span class="panel-title--default">First, check your party details</span>
-              <span class="panel-title--complete">Great! Your details are all good</span>
-              <span class="panel-title--incomplete">
-                <i class="fa fa-check" aria-hidden="true"></i> Thanks, your party change request has been saved
-              </span>
-            </h4>
-          </div>
-        </a>
-
-        <div id="collapse1" class="panel-collapse collapse in">
-          <div class="panel-body">
-            <p><strong>Your booking party:</strong></p>
-
-            <h5>Lead passenger:</h5>
-            <p>Richika Manchester <em>adult</em></p>
-
-            <h5>Other passengers:</h5>
-            <p>Ash Manchester <em>adult</em><br>
-            Joey Manchester <em>child, age 10</em><br>
-            Tim Manchester <em>child, age 7</em></p>
-
-
-            <span class="spacer"></span>
-            <p><strong>Are you happy with these details?</strong>  <a href="#" data-toggle="popover" data-trigger="click" data-placement="bottom" data-content="You&#8217;d be surprised how many customers only notice a spelling mistake when they get to the airport. Even if you haven&#8217;t booked a flight with us, check those details carefully!"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
-
-
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-action="complete" data-target="#customer-details-true">Yes</button>
-
-            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">No</button>
-
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body">
-                <p>Airline/hotel providers do not require titles, middle names or punctuations. If your first name, last name or age of any children needs to be changed, please provide details in the box below, select 'Request change' to save your information and finish checking the rest of your booking. </p>
-
-                <textarea class="form-control" rows="2"></textarea>
-
-                <span class="spacer"></span>
-
-                  <button type="button" class="btn btn-primary btn-block button-change-details" data-action="change" data-dismiss="modal">Request change</button>
-
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-
-<!--2nd accordion-->
-      <div class="panel panel-default" id="travel-panel">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed accordion-panel">
-          <div class="panel-heading">
-            <div class="panel-heading__message">
-              <i class="fa fa-check" aria-hidden="true"></i>
-            </div>
-            <h4 class="panel-title">
-              <span class="panel-title--default">Travel insurance</span>
-              <span class="panel-title--complete"><i class="fa fa-check" aria-hidden="true"></i> OK! Your insurance is sorted</span>
-              <span class="panel-title--added">We've added travel insurance to your basket</span>
-            </h4>
-          </div>
-        </a>
-
-        <div id="collapse2" class="panel-collapse collapse">
-
-          <div class="panel-body">
-            <p><strong>You don't appear to have travel insurance</strong>  <a class="pop-text" href="#" data-toggle="popover" data-placement="bottom"  data-content="We strongly recommend you take out travel insurance before departure in order to adequately cover you and your party. Some airlines may prevent you from travelling if proof of insurance cannot be provided."><i class="fa fa-info-circle" aria-hidden="true"></i></a><br>
-            Why not add it to your booking now and be rest assured that you're covered for your holiday?</p>
-
-            <label class="ancillary__label" for="insurance-europe">
-              <div class="ancillary__left">
-                <div>
-                  <h6 class="ancillary__title">
-                    Europe Single Trip
-                  </h6>
-                  <p>
-                    Travel insurance cover for this trip, for all the eligible members of the travelling party.
-                  </p>
-                  <p>
-                    <strong>Cover included (per person):</strong>
-                  </p>
-                  <ul>
-                    <li>Up to £10m Emergency Medical Cover</li><li>Up to £1,500 Personal Possessions Cover</li><li>Up to £1,250 Cancellation Cover</li>
-                  </ul>
-                </div>
-                <div>
-                  <span class="ancillary__price">
-                    £11.73 pp
-                  </span>
-                  <div class="ancillary__sub-text">
-                    (Includes Insurance Premium Tax)
-                  </div>
-                </div>
-              </div>
-
-              <div class="ancillary__right">
-                <input class="option" type="radio" name="insurance-option" id="insurance-europe" />
-                <span class="option__selection"></span>
-              </div>
-            </label>
-
-            <label class="ancillary__label" for="insurance-none">
-              <div class="ancillary__left">
-                <h6 class="ancillary__title">
-                  I have my own insurance, thanks
-                </h6>
-              </div>
-              <div class="ancillary__right">
-                <input class="option" type="radio" name="insurance-option" id="insurance-none" />
-                <span class="option__selection"></span>
-              </div>
-            </label>
-          </div>
-        </div>
-      </div>
-
-
-<!--3rd accordion-->
-      <div class="panel panel-default" id="parking-panel">
-
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed accordion-panel">
-          <div class="panel-heading">
-            <div class="panel-heading__message">
-              <i class="fa fa-check" aria-hidden="true"></i>
-            </div>
-            <h4 class="panel-title">
-              <span class="panel-title--default">Airport parking</span>
-              <span class="panel-title--complete">Gotcha! You don't need parking</span>
-              <span class="panel-title--added">
-                <i class="fa fa-check" aria-hidden="true"></i> We've added airport parking to your basket
-              </span>
-            </h4>
-          </div>
-        </a>
-
-        <div id="collapse3" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p><strong>You haven't booked airport parking</strong><br>
-            Why not take the hassle out of planning your holiday and add airport parking now? We search hundreds of car parks at airports across the country to find the best prices for you:</p>
-
-            <label class="ancillary__label" for="parking-meet">
-              <div class="ancillary__left">
-                <div class="ancillary__info">
-                  <h6 class="ancillary__title">
-                    Meet &amp; Greet
-                  </h6>
-                  <p>
-                    ACE Meet &amp; Greet - all terminals
-                  </p>
-                  <p>
-                    This is a meet and greet service
-                  </p>
-                </div>
-                <div>
-                  <span class="ancillary__price">
-                    &pound;73.50 pp
-                  </span>
-                </div>
-              </div>
-
-              <div class="ancillary__right">
-                <input class="option" type="radio" name="parking-option" id="parking-meet" />
-                <span class="option__selection"></span>
-              </div>
-            </label>
-
-            <label class="ancillary__label" for="parking-onsite">
-              <div class="ancillary__left">
-                <div class="ancillary__info">
-                  <h6 class="ancillary__title">
-                    On-site Parking
-                  </h6>
-                  <p>
-                    JetParks
-                  </p>
-                  <p>
-                    Transfers every 20 mins
-                  </p>
-                </div>
-                <div>
-                  <span class="ancillary__price">
-                    &pound;41.99 pp
-                  </span>
-                </div>
-              </div>
-
-              <div class="ancillary__right">
-                <input class="option" type="radio" name="parking-option" id="parking-onsite" />
-                <span class="option__selection"></span>
-              </div>
-            </label>
-
-            <label class="ancillary__label" for="parking-offsite">
-              <div class="ancillary__left">
-                <div class="ancillary__info">
-                  <h6 class="ancillary__title">
-                    Off-site Parking
-                  </h6>
-                  <p>
-                    Cophall Parking - all terminals
-                  </p>
-                  <p>
-                    Transfers every 15 mins
-                  </p>
-                </div>
-                <div>
-                  <span class="ancillary__price">
-                    &pound;44.10 pp
-                  </span>
-                </div>
-              </div>
-
-              <div class="ancillary__right">
-                <input class="option" type="radio" name="parking-option" id="parking-offsite" />
-                <span class="option__selection"></span>
-              </div>
-            </label>
-
-            <label class="ancillary__label" for="parking-none">
-              <div class="ancillary__left">
-                <h6 class="ancillary__title">
-                  I don't need parking, thanks
-                </h6>
-              </div>
-              <div class="ancillary__right">
-                <input class="option" type="radio" name="parking-option" id="parking-none" />
-                <span class="option__selection"></span>
-              </div>
-            </label>
-
-          </div>
-        </div>
-
-      </div>
-
-<!--4th accordion-->
-      <div class="panel panel-default" id="flight-panel">
-
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="collapsed accordion-panel">
-          <div class="panel-heading">
-            <div class="panel-heading__message">
-              <i class="fa fa-check" aria-hidden="true"></i>
-            </div>
-            <h4 class="panel-title">
-              <span class="panel-title--default">Your flights</span>
-              <span class="panel-title--complete">Great! Your flight details are correct</span>
-              <span class="panel-title--incomplete">
-                <i class="fa fa-check" aria-hidden="true"></i> Thanks, your flight change request has been saved
-              </span>
-            </h4>
-          </div>
-        </a>
-
-        <div id="collapse4" class="panel-collapse collapse">
-          <div class="panel-body">
-
-            <p><strong>Your flights:</strong></p>
-
-            <h5>Outbound</h5>
-            <div class="flight-details-container">
-              <div class="flight-no">
-                <p><i class="fa fa-plane" aria-hidden="true"></i>Ryanair FR3445<br>Manchester (MAN) to Palma (PMI)</p>
-
-              </div>
-              <div class="flight-stats">
-                <p>4 July 2018</p>
-              </div>
-
-            </div>
-
-            <h5>Inbound</h5>
-            <div class="flight-details-container">
-              <div class="flight-no">
-                <p><i class="fa fa-plane fa-rotate-180" aria-hidden="true"></i>Ryanair FR3446<br>Palma (PMI) to Manchester (MAN)</p>
-              </div>
-              <div class="flight-stats">
-                <p>11 July 2018</p>
-              </div>
-            </div>
-
-            <h5>In-flight extras</h5>
-            <div class="flight-details-container">
-              <div class="flight-no">
-                <p>Hold luggage  <a href="#" data-toggle="popover" data-placement="bottom" data-content="Ryanair allows 20 kg per person for hold luggage."><i class="fa fa-info-circle" aria-hidden="true"></i></a><br>
-                Pre-booked seats</p>
-              </div>
-              <div class="flight-stats">
-                <p>2 bags<br>
-                2 seats</p>
-              </div>
-            </div>
-
-            <span class="spacer"></span>
-
-            <p><strong>Important flight information</strong></p>
-
-            <button class="btn btn-info btn-block" type="button" data-toggle="collapse" data-target="#collapseflight1" aria-expanded="false" aria-controls="collapseflight1"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;Carry-on baggage allowance</button>
-
-            <div class="collapse" id="collapseflight1">
-              <div class="card card-body">
-                <p>Your airline, Ryanair, allows 1 wheelie bag which is 55x40x20cm in size and 1 small bag e.g. handbag, laptop bag etc. Your wheelie bag must not exceed 10kg in weight. This bag should easily fit in the overhead locker. Your small bag must not exceed 35x20x20cm and should easily fit under the seat in front of you. However, unless you add speedy boarding to your booking, your wheelie bag will be placed in the hold at the gate.</p>
-              </div>
-            </div>
-            <br>
-
-            <button class="btn btn-warning btn-block" type="button" data-toggle="collapse" data-target="#collapseflight2" aria-expanded="false" aria-controls="collapseflight2"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;Ryanair check-in instructions</button>
-
-            <div class="collapse" id="collapseflight2">
-              <div class="card card-body">
-                <p>You are required to check in online for all Ryanair flights. Please print your flight boarding passes prior to arrival at the airport.</p>
-                  <p>To check in online please log on to <a href="http://www.ryanair.com">www.ryanair.com  <i class="fa fa-external-link" aria-hidden="true"></i></a> and click on "Check-in"at the top of the page.</p>
-                  <p>Your allocated email address is <br><strong>richika.manchester@j-zoing.com</strong><br>
-                  Your reservation numbers are: <br><strong>123123</strong></p>
-                  <p>If you have multiple reservation numbers you will need to follow this check-in procedure for each one.</p>
-                  <p>Online check-in will open 60 days before each scheduled flight departure time only if you purchase an allocated seat from the Ryanair website. If you do not wish to select and purchase an allocated seat, you can check-in online between 4 days and 2 hours before each booked flight and will be randomly allocated a seat free of charge. Please note that failure to check in online may result in Ryanair check in fees at the airport. If you have any problems checking in online please send us a message via <strong>My Booking.</strong></p>
-              </div>
-            </div>
-
-            <span class="spacer"></span>
-
-            <p><strong>Are you happy that your flighs are OK?</strong></p>
-
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-action="complete" data-target="#customer-flights-true">Yes</button>
-
-            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">No</button>
-
-            <div class="collapse" id="collapseExample3">
-              <div class="card card-body">
-                <p>If you have made changes to this flight directly with the flight carrier (including adding bags or pre booking seats), we won't have that information so you don't need to do anything. However, if you want us to make a change to your flights, please provide details in the box below, select 'Request change' to save your information and finish checking the rest of your booking. Please note that flights are 100% non-refundable.</p>
-
-                <textarea class="form-control" rows="2"></textarea>
-
-                <span class="spacer"></span>
-
-                  <button type="button" class="btn btn-primary btn-block button-change-details" data-action="change" data-dismiss="modal">Request change</button>
-              </div>
-            </div>
-
-            </div>
-        </div>
-      </div>
-
-  <!--5th accordion-->
-      <div class="panel panel-default" id="hotel-panel">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="collapsed accordion-panel">
-          <div class="panel-heading">
-            <div class="panel-heading__message">
-              <i class="fa fa-check" aria-hidden="true"></i>
-            </div>
-            <h4 class="panel-title">
-              <span class="panel-title--default">Your accommodation</span>
-              <span class="panel-title--complete">OK! That's your accommodation checked<br>You're nearly done!</span>
-              <span class="panel-title--incomplete">
-                <i class="fa fa-check" aria-hidden="true"></i> Thanks, your accommodation change request has been saved
-              </span>
-            </h4>
-          </div>
-        </a>
-
-        <div id="collapse5" class="panel-collapse collapse">
-          <div class="panel-body">
-            <p><strong>Your accommodation:</strong></p>
-
-            <h5>Holiday Center, Santa Ponsa, Majorca, Balearics</h5>
-            <p>Board basis: Self Catering<br>
-            Room details: One Bedroom Apartment (1 Room)<br>
-            From: 04 July 2018 to 11 July 2018<br>
-            Duration: 7 Nights<br>
-            Guests: 2 Adults, 2 Children</p>
-
-            <span class="spacer"></span>
-
-            <p><strong>Important resort information</strong></p>
-
-            <button type="button" class="btn btn-warning btn-block" data-toggle="collapse" data-target="#customer-hotel-info"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;&nbsp;An in-resort tourism tax applies to this hotel</button>
-
-            <div class="collapse" id="customer-hotel-info">
-              <div class="card card-body">
-                <p>From 1st of July 2016, the Balearic Govt. are charging a sustainable tourism tax on all overnight stays which will be payable on arrival in the hotel:
-                  <ul>
-                    <li>5-star & 4-star superior hotels: €2 per night</li>
-                    <li>4-star & 3-star superior hotel: €1.5 per night</li>
-                    <li>1-star, 2-star & 3-star hotels: €1 per night</li>
-                    <li>4-key & 4-key superior tourist apartments: €2 per night</li></ul>
-
-                    Exclusions: Children under the age of 16 are exempt from the tax, 50% discount during the off-peak season (Nov 1st - Apr 30th) & 50% discount from the tenth night of any stay onwards</p>
-              </div>
-            </div>
-
-            <span class="spacer"></span>
-
-            <p><strong>Are you happy that this is correct?</strong></p>
-
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-action="complete" data-target="#customer-hotel-true">Yes</button>
-
-            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">No</button>
-
-            <div class="collapse" id="collapseExample4">
-              <div class="card card-body">
-                <p>If you need to make any changes to your accommodation, please provide details in the box below, select 'Request change' to save your information and finish checking the rest of your booking. </p>
-
-                <textarea class="form-control" rows="2"></textarea>
-
-                <span class="spacer"></span>
-
-                  <button type="button" class="btn btn-primary btn-block button-change-details" data-action="change" data-dismiss="modal">Request change</button>
-
-              </div>
-            </div>
-
-
-
-            </div>
-          </div>
-        </div>
-
-<!--6th accordion-->
-        <div class="panel panel-default" id="transfer-panel">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" class="collapsed accordion-panel">
-            <div class="panel-heading">
-              <div class="panel-heading__message">
-                <i class="fa fa-check" aria-hidden="true"></i>
-              </div>
-              <h4 class="panel-title">
-                <span class="panel-title--default">Transfers</span>
-                <span class="panel-title--complete">Transfer not needed - You are all done!</span>
-                <span class="panel-title--added">
-                  <i class="fa fa-check" aria-hidden="true"></i> We've added transfer details to your basket
-                </span>
-              </h4>
-            </div>
-          </a>
-          <div id="collapse6" class="panel-collapse collapse">
-            <div class="panel-body">
-
-              <p><strong>You don't appear to have booked a transfer yet.</strong><br>
-                Why not add a transfer to your booking now? We offer the best deals to get you from the airport to your destination so your holiday can begin even much quicker!</p>
-
-              <!-- <div class="checklist-ancillary-product__container">
-                <div class="checklist-ancillary-product">
-                  <div class="checklist-ancillary-product__detail">
-                    <p><strong>Shuttle Service (return)</strong></p>
-                    <p>From Majorca airport</p>
-                    <p>Estimated journey time: 1h 15m</p>
-                    <p>4 passengers</p>
-                  </div>
-                  <div class="checklist-ancillary-product__price">
-                    <p>&pound;13.91 pp</p>
-                  </div>
-                </div>
-                <button type="button" class="button button--primary" data-toggle="collapse" data-target="#transfers-details-added">Add to booking</button>
-              </div>
-
-              <span class="spacer"></span>
-
-              <div class="checklist-ancillary-product__container">
-                <div class="checklist-ancillary-product">
-                  <div class="checklist-ancillary-product__detail">
-                    <p><strong>Speedy Shuttle (return) Max 4 Stops</strong></p>
-                    <p>From Majorca airport</p>
-                    <p>Estimated journey time: 0h 50m</p>
-                    <p>4 passengers</p>
-                  </div>
-                  <div class="checklist-ancillary-product__price">
-                    <p>&pound;24.84 pp</p>
-                  </div>
-                </div>
-                <button type="button" class="button button--primary" data-toggle="collapse" data-target="#transfers-details-added">Add to booking</button>
-              </div>
-
-              <span class="spacer"></span>
-
-
-              <div class="checklist-ancillary-product__container">
-                <div class="checklist-ancillary-product">
-                  <div class="checklist-ancillary-product__detail">
-                    <p><strong>Private Taxi (return)</strong></p>
-                    <p>From Majorca airport</p>
-                    <p>Estimated journey time: 0h 35m</p>
-                    <p>4 passengers</p>
-                  </div>
-                  <div class="checklist-ancillary-product__price">
-                    <p>&pound;41.76 pp</p>
-                  </div>
-                </div>
-                <button type="button" class="button button--primary" data-toggle="collapse" data-target="#transfers-details-added">Add to booking</button>
-              </div>
-
-              <span class="spacer"></span>
-
-              <div class="radio">
-                <label><input type="radio" name="optradio" data-toggle="collapse" data-target="#customer-transfers-true"><strong>I don't need tranfers, thanks</strong></label>
-              </div> -->
-
-              <label class="ancillary__label" for="transfer-shuttle">
-                <div class="ancillary__left">
-                  <div class="ancillary__info">
-                    <h6 class="ancillary__title">
-                      Shuttle Service (return)
-                    </h6>
-                    <p>
-                      From Majorca airport
-                    </p>
-                    <p>
-                      Estimated journey time: 1h 15m
-                    </p>
-                    <p>
-                      4 passengers
-                    </p>
-                  </div>
-                  <div>
-                    <span class="ancillary__price">
-                      &pound;13.91 pp
-                    </span>
-                  </div>
-                </div>
-
-                <div class="ancillary__right">
-                  <input class="option" type="radio" name="transfer-option" id="transfer-shuttle" />
-                  <span class="option__selection"></span>
-                </div>
-              </label>
-
-              <label class="ancillary__label" for="transfer-speedy">
-                <div class="ancillary__left">
-                  <div class="ancillary__info">
-                    <h6 class="ancillary__title">
-                      Speedy Shuttle (return) <br> Max 4 Stops
-                    </h6>
-                    <p>
-                      From Majorca airport
-                    </p>
-                    <p>
-                      Estimated journey time: 0h 50m
-                    </p>
-                    <p>
-                      4 passengers
-                    </p>
-                  </div>
-                  <div>
-                    <span class="ancillary__price">
-                      &pound;24.84 pp
-                    </span>
-                  </div>
-                </div>
-
-                <div class="ancillary__right">
-                  <input class="option" type="radio" name="transfer-option" id="transfer-speedy" />
-                  <span class="option__selection"></span>
-                </div>
-              </label>
-
-              <label class="ancillary__label" for="transfer-taxi">
-                <div class="ancillary__left">
-                  <div class="ancillary__info">
-                    <h6 class="ancillary__title">
-                      Private Taxi (return)
-                    </h6>
-                    <p>
-                      From Majorca airport
-                    </p>
-                    <p>
-                      Estimated journey time: 0h 35m
-                    </p>
-                    <p>
-                      4 passengers
-                    </p>
-                  </div>
-                  <div>
-                    <span class="ancillary__price">
-                      &pound;41.76 pp
-                    </span>
-                  </div>
-                </div>
-
-                <div class="ancillary__right">
-                  <input class="option" type="radio" name="transfer-option" id="transfer-taxi" />
-                  <span class="option__selection"></span>
-                </div>
-              </label>
-
-              <label class="ancillary__label" for="transfer-none">
-                <div class="ancillary__left">
-                  <h6 class="ancillary__title">
-                    I don't need transfers, thanks
-                  </h6>
-                </div>
-                <div class="ancillary__right">
-                  <input class="option" type="radio" name="transfer-option" id="transfer-none" />
-                  <span class="option__selection"></span>
-                </div>
-              </label>
-
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-
-
-
-      <div class="continue-wrapper">
-        <!--
-        <div class="additional-info">
-          <label>Please provide a brief explanation for the changes that are required. When done, select 'Continue' and an agent will be in touch. Please note that changes may incur an administration fee to process.</label>
-          <textarea class="form-control" rows="8"></textarea>
-        </div> -->
-        <label class="no-changes-text">When you're done, select 'Submit' and we'll send you a confirmation of all your booking details by email.</label>
-        <label class="callback-text">When you're done, select 'Submit' to send your change request and one of our agents will call you back within xxx. You may be charged an admin fee for making a change. Read our <a href="">Terms of booking</a> for details.</label>
-
-        <form action="success.html" id="checklist-complete">
-          <button class="button button--primary button-checkout" type="submit" disabled>
-              Submit
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-
-</body>
-</html>
->>>>>>> before discard

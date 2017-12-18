@@ -36,7 +36,7 @@ a:hover, a:focus {
 
 .container {
   color: #17317f;
-  max-width: 400px;
+  max-width: 780px;
   padding: 0;
 }
 
@@ -45,12 +45,9 @@ a:hover, a:focus {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-/*.btn {
-  margin: .25rem 0 1rem 0;
-}*/
-
-.spacer {
-  margin: 1.5em;
+.panel-body-title {
+  margin-top: 1em;
+  font-weight: bold;
 }
 
 .panel-group {
@@ -531,4 +528,8 @@ input[type="radio"]:checked + .option__selection::after {
 
 [data-state="added"] .panel-title--added {
   display: block;
+}
+
+.form-control {
+  margin: 1em 0;
 }
