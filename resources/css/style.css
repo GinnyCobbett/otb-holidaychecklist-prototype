@@ -177,6 +177,10 @@ a.incomplete .panel-title--incomplete {
   text-align: center;
 }
 
+.holiday-checklist__heading p {
+  text-align: left;
+}
+
 .logo {
   display: flex;
   padding: 1em;
@@ -195,9 +199,10 @@ a.incomplete .panel-title--incomplete {
 @media only screen and (min-width: 500px) {
   .stepguide {
     display: flex;
+    padding-bottom: 1em;
   }
   .step {
-    max-width: 25%;
+    width: 33%;
   }
   .stepguidelist {
     display: none;
