@@ -192,6 +192,44 @@ a.incomplete .panel-title--incomplete {
   font-size: 1.75em;
 }
 
+@media only screen and (min-width: 500px) {
+  .stepguide {
+    display: flex;
+  }
+  .step {
+    max-width: 25%;
+  }
+  .stepguidelist {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .step {
+    display: flex;
+    text-align: left;
+  }
+  .stepguide {
+    display: none;
+  }
+  ul {
+    list-style: none;
+    text-align: left;
+    padding: 1px 0;
+  }
+  li {
+    margin: 10px 0;
+  }
+  .point {
+    font-weight: bold;
+  }
+}
+
+.step {
+  text-align: left;
+  padding: 8px;
+}
+
 .flight-details-container {
   display: -webkit-box;
   -webkit-align-items: flex-start;
@@ -295,43 +333,6 @@ a.incomplete .panel-title--incomplete {
 .checklist-completed,
 .checklist-incomplete {
   display: none;
-}
-
-table {
-    width: 100%;
-    border-collapse:
-    collapse; border-spacing: 0;
-}
-
-td, th {
-    border: 1px solid transparent;
-    height: 30px;
-}
-
-th {
-    font-weight: bold;
-}
-
-td {
-    text-align: left;
-}
-
-
-th:nth-child(4), td:nth-child(4) {
-  text-align: center;
-}
-
-th:nth-child(5), td:nth-child(5) {
-  text-align: center;
-}
-
-
-tr:nth-child(even) td {
-  background: #d5eff9;
-}
-
-tr:nth-child(odd) td {
-  background: #FEFEFE;
 }
 
 .modal-footer {
